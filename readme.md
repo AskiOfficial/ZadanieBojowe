@@ -1,4 +1,4 @@
-Topic: Projekt strony na programowanie__
-Deadline: 19.01.2024__
-Language: Java__
-Authors: Aski, WarterPL__
+Topic: Projekt strony na programowanie<br>
+Deadline: 19.01.2024<br>
+Language: Java<br>
+Authors: Aski, WarterPL<br>
