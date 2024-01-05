@@ -14,12 +14,13 @@ const Panels =
     Wystarczy podać tytuł i podtytuł w słowniku powyżej jak podane dwa przykłady
 */
 
-const setThemHere = document.getElementById("leftPanel")
-const keys = Array.from(Object.keys(Panels))
-for(let i = 0; i < keys.length; i++)
+const setThemHere = document.getElementById("leftPanel");
+const PanelsKeys = Array.from(Object.keys(Panels));
+
+for(let i = 0; i < PanelsKeys.length; i++)
 {
-    let pTitle = keys[i];
-    let pSubtitle = Panels[keys[i]];
+    let pTitle = PanelsKeys[i];
+    let pSubtitle = Panels[PanelsKeys[i]];
     setThemHere.innerHTML += "<div class=\"panels\" onclick=\"SelectPanel(" + i + ")\">" +
         "<h1>" + pTitle + "</h1>" +
         "<h2>" + pSubtitle + "</h2>" +
