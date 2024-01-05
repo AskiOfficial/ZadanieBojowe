@@ -1,0 +1,31 @@
+.panels
+{
+    height: 50px;
+    width: 100%;
+
+    border-bottom: 2px #F8981D solid;
+}
+.panels > h1
+{
+    margin: 0px;
+    padding: 0px;
+
+    margin-left: 10px;
+
+    font-size: 24px;
+    font-family: Jockey One;
+
+    color: #0C8AC7;
+}
+.panels > h2
+{
+    margin: 0px;
+    padding: 0px;
+    
+    margin-left: 10px;
+
+    font-size: 12px;
+    font-family: Jockey One;
+
+    color: #F8981D;
+}
