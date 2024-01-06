@@ -4,9 +4,10 @@ const Panels =
         Max length for key: 40
         Max length for value: 77
     */
+    "Wstęp do Javy" : "Co to i po co?",
+    "Rozpocznij przygodę z Javą" : "Instalacja środowiska oraz Javy",
     "Example of maximum title capacityIsHere" : "Example of maximum description capacity is just over there and this isLength",
-    "Starting page" : "Let's get started",
-    "Public static void main" : "String[] arg",
+    
 };
 
 /*

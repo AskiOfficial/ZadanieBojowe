@@ -27,6 +27,14 @@ body, html
     overflow: auto;
 }
 
+#leftTop
+{
+    width: 100%;
+    height: 175px;
+    
+    border-bottom: 2px #F8981D solid;
+}
+
 #rightPanel
 {
     height: 100%;

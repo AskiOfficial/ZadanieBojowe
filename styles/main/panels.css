@@ -4,13 +4,16 @@
     width: 100%;
 
     border-bottom: 2px #F8981D solid;
+    
+    cursor: pointer;
 }
 .panels > h1
 {
     margin: 0px;
     padding: 0px;
 
-    margin-left: 10px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
 
     font-size: 24px;
     font-family: Jockey One;
@@ -22,7 +25,10 @@
     margin: 0px;
     padding: 0px;
     
-    margin-left: 10px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+
+    text-align: right;
 
     font-size: 12px;
     font-family: Jockey One;

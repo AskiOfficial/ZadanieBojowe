@@ -1,10 +1,11 @@
 let SelectedPanel = 0;
 
-const Content = document.getElementById("rightPanel");
-
 function SelectPanel(ID)
 {
-    console.log("THIS IS PAGE NUMBER " + ID)
+    const Content = document.getElementById("rightPanel");
+    const Title = document.getElementById("WWWTitle");
+
     SelectedPanel = ID;
-    Content.innerHTML = "<embed src=\"pages/" + PanelsKeys[SelectedPanel] + ".html\">"
+    Content.innerHTML = "<embed src=\"pages/" + PanelsKeys[ID] + ".html\">";
+    Title.innerHTML = PanelsKeys[ID]
 }
