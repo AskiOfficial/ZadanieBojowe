@@ -25,6 +25,13 @@ body, html
 
     float: left;
     overflow: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+#leftPanel h1 
+{
+    padding-top: 5px;
 }
 
 #leftTop
@@ -48,4 +55,10 @@ body, html
 {
     width: 100%;
     height: 99.5%;
+}
+
+#java_header
+{
+    margin: auto;
+    display: block;
 }
