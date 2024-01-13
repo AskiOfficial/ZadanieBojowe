@@ -6,7 +6,19 @@ const Panels =
     */
     "Wstęp do Javy" : "Co to i po co?",
     "Rozpocznij przygodę z Javą" : "Instalacja środowiska oraz Javy",
-    "Example of maximum title capacityIsHere" : "Example of maximum description capacity is just over there and this isLength",
+    "Rozpocznij przygodę z Javą1" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą2" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą3" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą4" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą5" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą6" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą7" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą8" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą9" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą10" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą11" : "Instalacja środowiska oraz Javy",
+    "Rozpocznij przygodę z Javą12" : "Instalacja środowiska oraz Javy",
+    "Example of maximum title capacityIsHir" : "Example of maximum description capacity is just over there and this isLength",
     
 };
 
@@ -15,7 +27,7 @@ const Panels =
     Wystarczy podać tytuł i podtytuł w słowniku powyżej jak podane dwa przykłady
 */
 
-const setThemHere = document.getElementById("leftPanel");
+const setThemHere = document.getElementById("leftMid");
 const PanelsKeys = Array.from(Object.keys(Panels));
 
 for(let i = 0; i < PanelsKeys.length; i++)
