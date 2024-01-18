@@ -101,10 +101,20 @@ body, html
     
     font-size: 1.3vw;
     font-family: 'Montserrat', sans-serif;
+    color: white;
 
-    background-color: #F8981D;
-    border: none;
+    background-color: #141414;
+    border: #F8981D 0.2vw solid;
     border-radius: 1.5vw;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+#Next:hover, #Back:hover
+{
+    background-color: #F8981D;
 }
 
 #tytul
