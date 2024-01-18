@@ -6,15 +6,15 @@ body, html
     width: 98.5%;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    padding-left: 10px;
+    padding: 0.5vw;
 }
 
 
 .codeBlock
 {
     background-color: #1e1e1e;
-    border-radius: 5px;
-    padding: 5px;
+    border-radius: 1vw;
+    padding: 0.5vw;
     font-family: 'Consolas';
 }
 .keyword
@@ -31,15 +31,11 @@ body, html
 { color: #C77DBB; }
 
 .codeTab
-{
-    margin-left: 40px;
-}
+{ margin-left: 40px; }
 
+a
+{ color: #0C8AC7; }
 a:visited
-{
-    color: inherit;    
-}
+{ color: #085c86;}
 a:hover
-{
-    color: #F8981D;
-}
+{ color: #F8981D;}
