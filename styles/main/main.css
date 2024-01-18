@@ -24,7 +24,7 @@ body, html
 
     background-color: #282828;
 
-    border-right: 2px #F8981D solid;
+    border-right: 0.2vw #F8981D solid;
 
     float: left;
 
@@ -44,7 +44,7 @@ body, html
     width: 100%;
     height: 175px;
     height: 9.063vw;
-    border-bottom: 2px #F8981D solid;
+    border-bottom: 0.2vw #F8981D solid;
 }
 
 #java_header
@@ -59,6 +59,7 @@ body, html
 {
     color: white;
     text-align: center;
+    font-size: 1vw;
 }
 
 #rightPanel
@@ -86,7 +87,7 @@ body, html
 {
     width: 100%;
     height: 7.5%;
-    border-bottom: 2px #EC2025 dashed;
+    border-bottom: 0.2vw #EC2025 dashed;
 
     display: flex;
     align-items: center;
@@ -98,17 +99,16 @@ body, html
     margin: 2%;
     padding: 1% 1.5%;
     
-    font-size: 16px;
+    font-size: 1.3vw;
     font-family: 'Montserrat', sans-serif;
 
     background-color: #F8981D;
     border: none;
-    border-radius: 10px;
+    border-radius: 1.5vw;
 }
 
 #tytul
 {
     color: white;
-    font-size: 3vw;
-
+    font-size: 2vw;
 }

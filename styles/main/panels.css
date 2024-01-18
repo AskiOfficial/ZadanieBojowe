@@ -1,10 +1,9 @@
 .panels
 {
-    height: 50px;
+    height: 3.2vw;
     width: 100%;
 
-    border-bottom: 2px #F8981D solid;
-    
+    border-bottom: 0.2vw #F8981D solid;
     cursor: pointer;
 }
 .panels > h1
@@ -12,10 +11,10 @@
     margin: 0px;
     padding: 0px;
 
-    margin-left: 7.5px;
-    margin-right: 7.5px;
+    margin-left: 0.75vw;
+    margin-right: 0.75vw;
 
-    font-size: 22px;
+    font-size: 1.3vw;
     font-family: Jockey One;
 
     color: #0C8AC7;
@@ -25,12 +24,12 @@
     margin: 0px;
     padding: 0px;
     
-    margin-left: 7.5px;
-    margin-right: 7.5px;
+    margin-left: 0.75vw;
+    margin-right: 0.75vw;
 
     text-align: right;
 
-    font-size: 12px;
+    font-size: 0.8vw;
     font-family: Jockey One;
 
     color: #F8981D;
