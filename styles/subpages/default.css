@@ -3,9 +3,43 @@
 body, html
 {
     color: white;
-    padding: 7.5px;
     width: 98.5%;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
+    padding-left: 10px;
 }
 
+
+.codeBlock
+{
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Consolas';
+}
+.keyword
+{ color: #CF8E6D; }
+.comment
+{ color: #7A7E85; }
+.number
+{ color: #2AACB8; }
+.string
+{ color: #6AAB73; }
+.classOrMethodName
+{ color: #56A8F5; }
+.staticOrInstance
+{ color: #C77DBB; }
+
+.codeTab
+{
+    margin-left: 40px;
+}
+
+a:visited
+{
+    color: inherit;    
+}
+a:hover
+{
+    color: #F8981D;
+}

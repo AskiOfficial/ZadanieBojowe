@@ -43,7 +43,7 @@ body, html
 {
     width: 100%;
     height: 175px;
-    
+    height: 9.063vw;
     border-bottom: 2px #F8981D solid;
 }
 
@@ -52,6 +52,7 @@ body, html
     margin: auto;
     display: block;
     cursor: pointer;
+    width: 18.802vw;
 }
 
 #leftADC
@@ -86,4 +87,28 @@ body, html
     width: 100%;
     height: 7.5%;
     border-bottom: 2px #EC2025 dashed;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Next, #Back 
+{
+    margin: 20px;
+    padding: 10px 20px;
+    
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+    background-color: #F8981D;
+    border: none;
+    border-radius: 10px;
+}
+
+#tytul
+{
+    color: white;
+    font-size: 3vw;
+
 }
