@@ -8,7 +8,7 @@ const Panels =
     "Rozpocznij przygodę z Javą" : "Instalacja środowiska oraz Javy",
     "Pierwszy program" : "Wypisywanie i syntax",
     "Komentowanie swojego kodu" : "Komentarze",
-    "Przechowy waniewartości" : "Zmienne",
+    "Przechowywanie wartości" : "Zmienne",
     "Czym jest przechowywana wartość" : "Typy danych",
     "JAVA TYPE CASTING" : "###Nie wiem jak nazwać",
     "JAVA OPERATORS" : "Operatory",

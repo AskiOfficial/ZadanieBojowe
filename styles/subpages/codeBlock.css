@@ -1,0 +1,22 @@
+.codeBlock
+{
+    background-color: #1e1e1e;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    font-family: 'Consolas';
+}
+.keyword
+{ color: #CF8E6D; }
+.comment
+{ color: #7A7E85; }
+.number
+{ color: #2AACB8; }
+.string
+{ color: #6AAB73; }
+.classOrMethodName
+{ color: #56A8F5; }
+.staticOrInstance
+{ color: #C77DBB; }
+
+.codeTab
+{ margin-left: 40px; }
