@@ -4,6 +4,7 @@
     border-radius: 1vw;
     padding: 0.5vw;
     font-family: 'Consolas';
+    font-size: 1.4vw;
 }
 .keyword
 { color: #CF8E6D; }
@@ -19,4 +20,4 @@
 { color: #C77DBB; }
 
 .codeTab
-{ margin-left: 40px; }
+{ margin-left: 3vw; }

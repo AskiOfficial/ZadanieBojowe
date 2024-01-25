@@ -3,14 +3,12 @@
 body, html
 {
     color: white;
-    width: 98.5%;
+    width: 97%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 1.8vw;
     padding: 0.5vw;
     background-color: #141414;
 }
-
-
 
 
 a
