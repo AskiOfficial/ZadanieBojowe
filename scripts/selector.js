@@ -18,7 +18,7 @@ function SelectPanel(ID)
     const Tytul = document.getElementById("tytul"); 
 
     selectedPanel = ID;
-    Content.innerHTML = "<embed src=\"pages/" + PanelsKeys[ID] + ".html\">";
+    Content.innerHTML = "<embed src=\"pages/" + ID + "." + PanelsKeys[ID] + ".html\">";
     Title.innerHTML = PanelsKeys[ID]
     Tytul.innerHTML = PanelsKeys[ID]
 }

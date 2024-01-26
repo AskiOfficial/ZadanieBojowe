@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 :root
 {
     --FilledColor: #123456;
@@ -17,29 +19,28 @@ body, html
 
 #eTop
 {
+    width: 100%;
     background-color: #282828;
     height: 4vw;
 }
 #eButtons
 {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    float: left;
 }
-#eNext, #ePrev
-{
 
-}
 .eSelector
 {
-    background-color: #0C8AC7;
+    background-color: #282828;
     color: white;
     padding-left: 0.7vw;
     padding-right: 0.7vw;
     height: 3vw;
-    width: auto;
+    width: 3.5vw;
     font-size: 1.5vw;
     border-radius: 1.5vw;
     border-width: 0.2vw;
@@ -49,4 +50,37 @@ body, html
 .eSelector:hover
 {
     background-color: var(--CurrentColor);
+}
+
+#eWyślij
+{
+    width: 9%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+#eWyślijButton
+{
+    background-color: #282828;
+    color: white;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    height: 3vw;
+    width: 7vw;
+    font-size: 1.5vw;
+    border-radius: 1.5vw;
+    border-width: 0.2vw;
+    border-color: #F8981D;
+    border-style: groove;
+    text-align: center;
+}
+#eWyślijButton:hover
+{
+    background-color: var(--CurrentColor);
+}
+#eNext, #ePrev
+{
+    
 }
