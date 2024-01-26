@@ -109,12 +109,12 @@ body, html
     border-radius: 1.5vw;
 
     cursor: pointer;
-    transition: 0.5s;
+    transition: background-color 0.5s;
 }
 
 #Next:hover, #Back:hover
 {
-    transition: 0.5s;
+    /* transition: 0.5s; */
     background-color: #F8981D;
 }
 
