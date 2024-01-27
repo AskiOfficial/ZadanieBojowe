@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-body, html
-{
+body,
+html {
     margin: 0px;
     background-color: #141414;
 
@@ -11,14 +11,12 @@ body, html
     font-family: 'Montserrat', sans-serif;
 }
 
-#main
-{
+#main {
     width: 100%;
     height: 100%;
 }
 
-#leftPanel
-{
+#leftPanel {
     width: 25%;
     height: 100%;
 
@@ -34,36 +32,37 @@ body, html
     color-scheme: dark;
 }
 
-#leftPanel h1 
-{
+#leftPanel h1 {
     padding-top: 0.5vw;
 }
 
-#leftTop
-{
+#leftTop {
     width: 100%;
     height: 175px;
     height: 9.063vw;
     border-bottom: 0.15vw #F8981D solid;
+    box-shadow: 0vw -0.3vw 1vw 0.05vw rgb(99, 99, 99);
+    border-radius: 0vw 0vw 2vw 2vw;
+}
+#leftTop:hover
+{
+    box-shadow: 0vw 0.3vw 0.7vw 0.05vw #c11a1d;
 }
 
-#java_header
-{
+#java_header {
     margin: auto;
     display: block;
     cursor: pointer;
     width: 18.802vw;
 }
 
-#leftADC
-{
+#leftADC {
     color: white;
     text-align: center;
     font-size: 1vw;
 }
 
-#rightPanel
-{
+#rightPanel {
     height: 100%;
     width: 74.38%;
 
@@ -71,20 +70,17 @@ body, html
     overflow: auto;
 }
 
-#rightSupport
-{
+#rightSupport {
     width: 100%;
     height: 91.5%;
 }
 
-#rightSupport > embed
-{
+#rightSupport>embed {
     width: 100%;
     height: 100%;
 }
 
-#rightJungle
-{
+#rightJungle {
     width: 100%;
     height: 7.33%;
     border-bottom: 0.2vw #EC2025 dashed;
@@ -94,12 +90,12 @@ body, html
     justify-content: space-between;
 }
 
-#Next, #Back 
-{
+#Next,
+#Back {
     margin: 1vw;
     padding: 0.5vw 1vw;
     width: 6vw;
-    
+
     font-size: 1.2vw;
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -112,21 +108,95 @@ body, html
     transition: background-color 0.5s;
 }
 
-#Next:hover, #Back:hover
-{
-    /* transition: 0.5s; */
+#Next:hover,
+#Back:hover {
     background-color: #F8981D;
 }
 
-#tytul
-{
+#tytul {
     color: white;
     font-size: 2vw;
 }
 
-a
-{ color: #0C8AC7; text-decoration: none; }
-a:visited
-{ color: #085c86;}
-a:hover
-{ color: #F8981D;}
+a {
+    color: #0C8AC7;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #085c86;
+}
+
+a:hover {
+    color: #F8981D;
+}
+
+#toggleButton {
+    display: none;
+    position: fixed;
+    bottom: 0%;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #leftPanel {
+        position: fixed;
+        left: -101%;
+        width: 100%;
+        height: 94.75%;
+    }
+
+    #Next, #Back {
+        width: auto;
+        padding: 1vw 2vw;
+        font-size: 2vw;
+    }
+    #tytul {
+        font-size: 4vw;
+    }
+    #rightPanel {
+        width: 100%;
+    }
+    #rightSupport
+    {
+        height: 91%;;
+    }
+
+    #toggleButton {
+        display: block;
+        width: 100%;
+        height: 5vh;
+        background-color: #282828;
+        box-shadow: 0vw -0.3vw 1vw 0.05vw rgb(99, 99, 99);
+        color: white;
+        font-size: 1.5vh;
+        border: none;
+        border-top: 0.2vw #F8981D solid;
+        text-align: center;
+        cursor: pointer;
+    }
+    #toggleButton:hover
+    {
+        box-shadow: 0vw -0.3vw 1vw 0.05vw #F8981D;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        left: -101%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -101%;
+    }
+}

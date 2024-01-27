@@ -1,0 +1,24 @@
+body, html
+{
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #141414;
+    padding: 0px;
+    margin: 0px;
+    color-scheme: dark;
+    overflow: hidden;
+}
+
+embed
+{
+    height: 100%;
+    width: 100%;
+}
+
+.Pytanie
+{
+    margin: auto;
+    text-align: center;
+    margin-top: 15vw;
+}
