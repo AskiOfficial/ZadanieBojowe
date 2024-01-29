@@ -8,12 +8,13 @@
     border-radius: 1vw;
     margin: auto;
     margin-top: 1vw;
-    box-shadow: 0vw 0.3vw 0.7vw 0.05vw rgb(99, 99, 99);
+    box-shadow: 0vw 0.3vw 0.35vw 0.05vw rgb(99, 99, 99);
     cursor: pointer;
 }
 .panels:hover
 {
-    box-shadow: 0vw 0.3vw 0.7vw 0.05vw #c11a1d;
+    transition: 0.2s;
+    box-shadow: 0vw 0.3vw 0.7vw 0.05vw rgb(162, 162, 162);
 }
 .panels > h1
 {
@@ -44,7 +45,7 @@
     color: #F8981D;
 }
 
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 800px)
 {
     .panels > h1, .panels > h2 {
         font-size: 2vw

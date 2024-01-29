@@ -41,12 +41,13 @@ html {
     height: 175px;
     height: 9.063vw;
     border-bottom: 0.15vw #F8981D solid;
-    box-shadow: 0vw -0.3vw 1vw 0.05vw rgb(99, 99, 99);
+    box-shadow: 0vw 0.3vw 0.35vw 0.05vw rgb(99, 99, 99);
     border-radius: 0vw 0vw 2vw 2vw;
 }
 #leftTop:hover
 {
-    box-shadow: 0vw 0.3vw 0.7vw 0.05vw #c11a1d;
+    transition: 0.2s;
+    box-shadow: 0vw 0.3vw 0.7vw 0.05vw rgb(162, 162, 162);
 }
 
 #java_header {
@@ -67,7 +68,7 @@ html {
     width: 74.38%;
 
     float: left;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #rightSupport {
@@ -138,7 +139,7 @@ a:hover {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     #leftPanel {
         position: fixed;
         left: -101%;

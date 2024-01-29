@@ -49,6 +49,7 @@ body, html
 }
 .eSelector:hover
 {
+    transition: 0.2s;
     background-color: var(--CurrentColor);
 }
 
