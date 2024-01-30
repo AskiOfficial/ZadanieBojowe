@@ -20,7 +20,7 @@ Here Get cookies at start of running html
 if(_AllowedCookies)
 {
     const gottenLastLesson = Number(GetCookie("LastOpened"));
-    gottenLastLesson < 0 
+    gottenLastLesson > 0 
     ? SelectPanel(gottenLastLesson, false)
     : SelectMain(false);
 }
