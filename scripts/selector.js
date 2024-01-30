@@ -44,4 +44,8 @@ function SelectMain(isNorB)
     {
         lol();
     }
+    if(_AllowedCookies)
+    {
+        SetCookie("LastOpened", String(-1), 30);
+    }
 }
