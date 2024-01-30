@@ -25,6 +25,10 @@ function SelectPanel(ID, isNorB)
     {
         lol();
     }
+    if(_AllowedCookies)
+    {
+        SetCookie("LastOpened", String(ID), 30);
+    }
 }
 function SelectMain(isNorB)
 {
