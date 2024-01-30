@@ -10,4 +10,8 @@ function selectQuestion(id)
     let pytanie = Math.floor(Math.random() * QuestionsKeys.length);
     console.log(pytanie);
     QuestionsPanel.innerHTML += QuestionsKeys[pytanie];
+
+    //Losowanie pytań z listy (trzeba dodać, żeby się nie powtarzały ale najpierw potrzebujemy min 20 pytań
+    //w generate questions)
+    // schemat pytań {"pytanie":[index poprawnej odpowiedzi, "A", "B", "C", "D"]}
 }*/
