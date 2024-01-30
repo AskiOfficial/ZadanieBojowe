@@ -138,6 +138,64 @@ a:hover {
     bottom: 0%;
 }
 
+#acceptCookies
+{
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    backdrop-filter: blur(0.5vw);
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+#acceptCookies > #inside
+{
+    color: white;
+
+    position: absolute;
+    padding: 2vw;
+    width: 50vw;
+    height: 75vh;
+
+    background-color: #141414;
+    border-color: #282828;
+    border-width: 0.4vw;
+    border-style: solid;
+    border-radius: 10vw;
+
+    box-shadow: 0vw 0vw 0.7vw 0.05vw rgb(162, 162, 162);
+}
+#acceptCookies > #inside > .flexBr
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#acceptCookies > #inside > .flexBr > input[type=button]
+{
+    margin: 1vw;
+    padding: 0.5vw 1vw;
+    width: 18vw;
+
+    text-align: center;
+
+    font-size: 1.2vw;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    background-color: #141414;
+    border: #F8981D 0.15vw solid;
+    border-radius: 1.5vw;
+
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+#acceptCookies > #inside > .flexBr > input[type=button]:hover
+{ background-color: #F8981D; }
+#acceptCookies > #inside > .flexBr > input[type=button]:active
+{ background-color: #8a530b; }
 
 @media screen and (max-width: 800px) {
     #leftPanel {
