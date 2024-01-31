@@ -2,19 +2,20 @@
 
 :root
 {
-    --FilledColor: #123456;
-    --CurrentColor: #F8981D;
+    --CurrentHoverColor: #123456;
+    --CurrentColor: #282828;
 }
 
 body, html
 {
     color: white;
-    width: 100%;
+    width: 100vw;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     background-color: #141414;
     padding: 0px;
     margin: 0px;
+    overflow: hidden;
 }
 
 #eTop
@@ -32,6 +33,12 @@ body, html
     justify-content: space-evenly;
     float: left;
 }
+#eBottom
+{
+    height: 92vh;
+    width: 100vw;
+    background-color: #12345641;
+}
 
 .eSelector
 {
@@ -46,11 +53,12 @@ body, html
     border-width: 0.2vw;
     border-color: #F8981D;
     border-style: groove;
+    background-color: var(--CurrentColor);
 }
 .eSelector:hover
 {
     transition: 0.2s;
-    background-color: var(--CurrentColor);
+    background-color: #F8981D;
 }
 
 #eWyślij
@@ -79,5 +87,5 @@ body, html
 }
 #eWyślijButton:hover
 {
-    background-color: var(--CurrentColor);
+    background-color: #F8981D;
 }
