@@ -1,4 +1,6 @@
+let _AllowedCookies = false;
 let cookie_consent = GetCookie("user_cookie_consent");
+
 if(cookie_consent == "ENABLED")
 {
     document.getElementById("acceptCookies").style.display = "none";
@@ -18,6 +20,7 @@ Here Get cookies at start of running html
 if(_AllowedCookies)
 {
     const gottenLastLesson = Number(GetCookie("LastOpened"));
+    console.log(gottenLastLesson)
     gottenLastLesson >= 0 
     ? SelectPanel(gottenLastLesson, false)
     : SelectMain(false);

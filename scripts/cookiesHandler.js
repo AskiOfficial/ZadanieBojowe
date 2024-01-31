@@ -1,5 +1,3 @@
-let _AllowedCookies = false;
-
 function EnableCookies(isEnabled)
 {
     if(isEnabled)
