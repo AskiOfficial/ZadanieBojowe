@@ -11,11 +11,16 @@
     Java Syntax
 In the previous chapter, we created a Java file called Main.java, and we used the following code to print "Hello World" to the screen:
     <div class="codeBlock">
-        public class Main {
-            public static void main(String[] args) {
-              System.out.println("Hello World");
+        <code class="keyword">public class</code> <code class="JClass">Main</code> <br>
+        {<div class="codeTab">
+            <code class="keyword">public static void</code> <code class="classOrMethodName">main</code>(<code class="JClass">String</code>[] args)<br>
+            {
+                <div class="codeTab">
+                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="string">"Hello World"</code>);
+                </div>
             }
-          }
+            </div>
+        }
     </div>
     Example explained
 Every line of code that runs in Java must be inside a class. In our example, we named the class Main. A class should always start with an uppercase first letter.
@@ -29,7 +34,7 @@ The name of the java file must match the class name. When saving the file, save 
 <h1>The main Method</h1>
 The main() method is required and you will see it in every Java program:
 <div class="codeBlock">
-    public static void main(String[] args)
+    <code class="keyword">public static void</code> <code class="classOrMethodName">main</code>(<code class="JClass">String</code>[] args)
 </div>
 Any code inside the main() method will be executed. Don't worry about the keywords before and after main. You will get to know them bit by bit while reading this tutorial.
 
@@ -39,10 +44,10 @@ For now, just remember that every Java program has a class name which must match
 Inside the main() method, we can use the println() method to print a line of text to the screen:
 
 <div class="codeBlock">
-    public static void main(String[] args) <br>
+    <code class="keyword">public static void</code> <code class="classOrMethodName">main</code>(<code class="JClass">String</code>[] args)<br>
     {
         <div class="codeTab">
-            System.<code class="staticOrInstance">out</code>.println(<code class="string">"Hello World"</code>);
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="string">"Hello World"</code>);
         </div>
     }
 </div>
@@ -62,17 +67,17 @@ You learned from the previous chapter that you can use the println() method to o
 </div>
 You can add as many println() methods as you want. Note that it will add a new line for each method:
 <div class="codeBlock">
-    System.out.println("Hello World!");<br>
-    System.out.println("I am learning Java.");<br>
-    System.out.println("It is awesome!");
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println("Hello World!");<br>
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println("I am learning Java.");<br>
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println("It is awesome!");
 </div>
 <h1>Double Quotes</h1>
 When you are working with text, it must be wrapped inside double quotations marks "".
 
 If you forget the double quotes, an error occurs:
 <div class="codeBlock">
-    System.out.println("This sentence will work!");<br>
-    System.out.println(This sentence will produce an error);
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println("This sentence will work!");<br>
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(This sentence will produce an error);
 </div>
 
 <h1>The Print() Method</h1>
@@ -80,8 +85,22 @@ There is also a print() method, which is similar to println().
 
 The only difference is that it does not insert a new line at the end of the output:
 <div class="codeBlock">
-    System.out.print("Hello World! ");<br>
-    System.<code class="staticOrInstance">out</code>.print("I will print on the same line.");
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.print("Hello World! ");<br>
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.print("I will print on the same line.");
+</div>
+<h1>Print Numbers</h1>
+You can also use the println() method to print numbers.
+
+However, unlike text, we don't put numbers inside double quotes:
+<div class="codeBlock">
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="number">3</code>);<br>
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="number">358</code>);<br>
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="number">2137</code>);
+</div>
+You can also perform mathematical calculations inside the println() method:
+<div class="codeBlock">
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="number">3</code> + <code class="number">3</code>);<br>
+    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="number">2</code> * <code class="number">5</code>);
 </div>
 </body>
 </html>
