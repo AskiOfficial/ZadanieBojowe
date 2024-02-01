@@ -8,9 +8,80 @@
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
 </head>
 <body>
-    
+    Java Syntax
+In the previous chapter, we created a Java file called Main.java, and we used the following code to print "Hello World" to the screen:
     <div class="codeBlock">
-        
+        public class Main {
+            public static void main(String[] args) {
+              System.out.println("Hello World");
+            }
+          }
     </div>
+    Example explained
+Every line of code that runs in Java must be inside a class. In our example, we named the class Main. A class should always start with an uppercase first letter.
+
+Note: Java is case-sensitive: "MyClass" and "myclass" has different meaning.
+
+The name of the java file must match the class name. When saving the file, save it using the class name and add ".java" to the end of the filename. To run the example above on your computer, make sure that Java is properly installed: Go to the Get Started Chapter for how to install Java. The output should be:
+<div class="codeBlock">
+    Hello World
+</div>
+<h1>The main Method</h1>
+The main() method is required and you will see it in every Java program:
+<div class="codeBlock">
+    public static void main(String[] args)
+</div>
+Any code inside the main() method will be executed. Don't worry about the keywords before and after main. You will get to know them bit by bit while reading this tutorial.
+
+For now, just remember that every Java program has a class name which must match the filename, and that every program must contain the main() method.
+
+<h1>System.out.println()</h1>
+Inside the main() method, we can use the println() method to print a line of text to the screen:
+
+<div class="codeBlock">
+    public static void main(String[] args) <br>
+    {
+        <div class="codeTab">
+            System.<code class="staticOrInstance">out</code>.println(<code class="string">"Hello World"</code>);
+        </div>
+    }
+</div>
+
+<h1>Note:</h1>The curly braces {} marks the beginning and the end of a block of code.
+
+System is a built-in Java class that contains useful members, such as out, which is short for "output". The println() method, short for "print line", is used to print a value to the screen (or a file).
+
+Don't worry too much about System, out and println(). Just know that you need them together to print stuff to the screen.
+
+You should also note that each code statement must end with a semicolon (;).
+
+<h1>Print Text</h1>
+You learned from the previous chapter that you can use the println() method to output values or print text in Java:
+<div class="codeBlock">
+    System.out.println("Hello World!");
+</div>
+You can add as many println() methods as you want. Note that it will add a new line for each method:
+<div class="codeBlock">
+    System.out.println("Hello World!");<br>
+    System.out.println("I am learning Java.");<br>
+    System.out.println("It is awesome!");
+</div>
+<h1>Double Quotes</h1>
+When you are working with text, it must be wrapped inside double quotations marks "".
+
+If you forget the double quotes, an error occurs:
+<div class="codeBlock">
+    System.out.println("This sentence will work!");<br>
+    System.out.println(This sentence will produce an error);
+</div>
+
+<h1>The Print() Method</h1>
+There is also a print() method, which is similar to println().
+
+The only difference is that it does not insert a new line at the end of the output:
+<div class="codeBlock">
+    System.out.print("Hello World! ");<br>
+    System.<code class="staticOrInstance">out</code>.print("I will print on the same line.");
+</div>
 </body>
 </html>
