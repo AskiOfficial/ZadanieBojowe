@@ -27,5 +27,114 @@
     Where type is one of Java's types (such as int or String), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.
 
     To create a variable that should store text, look at the following example:
+    <div class="codeBlock">
+        String name = "John";<br>
+        System.out.println(name);
+    </div>
+    To create a variable that should store a number, look at the following example:
+    <div class="codeBlock">
+        int myNum = 15;
+        System.out.println(myNum);
+    </div>
+    You can also declare a variable without assigning the value, and assign the value later:
+    <div class="codeBlock">
+        int myNum;<br>
+        myNum = 15;<br>
+        System.out.println(myNum);
+    </div>
+    Note that if you assign a new value to an existing variable, it will overwrite the previous value:
+    <div class="codeBlock">
+        int myNum = 15;<br>
+        myNum = 20;  // myNum is now 20<br>
+        System.out.println(myNum);
+    </div>
+    <hr>
+    Final Variables
+    If you don't want others (or yourself) to overwrite existing values, use the final keyword (this will declare the variable as "final" or "constant", which means unchangeable and read-only):
+    <div class="codeBlock">
+        final int myNum = 15;<br>
+        myNum = 20;  // will generate an error: cannot assign a value to a final variable
+    </div>
+    <hr>
+    Other Types
+    A demonstration of how to declare variables of other types:
+    <div class="codeBlock">
+        int myNum = 5;<br>
+        float myFloatNum = 5.99f;<br>
+        char myLetter = 'D';<br>
+        boolean myBool = true;<br>
+        String myText = "Hello";
+    </div>
+    <div class="noteBlock">
+        You will learn more about data types in the next section.
+    </div>
+    <hr>
+    Display Variables
+    The println() method is often used to display variables.
+
+    To combine both text and a variable, use the + character:
+    <div class="codeBlock">
+        String name = "John";<br>
+        System.out.println("Hello " + name);
+    </div>
+    You can also use the + character to add a variable to another variable:
+    <div class="codeBlock">
+        String firstName = "John ";<br>
+        String lastName = "Doe";<br>
+        String fullName = firstName + lastName;<br>
+        System.out.println(fullName);
+    </div>
+    For numeric values, the + character works as a mathematical operator (notice that we use int (integer) variables here):
+    <div class="codeBlock">
+        int x = 5;<br>
+        int y = 6;<br>
+        System.out.println(x + y); // Print the value of x + y
+    </div>
+    From the example above, you can expect:
+
+    x stores the value 5
+    y stores the value 6
+    Then we use the println() method to display the value of x + y, which is 11
+    <hr>
+    Declare Many Variables
+    To declare more than one variable of the same type, you can use a comma-separated list:
+    Instead of writing:
+    <div class="codeBlock">
+        int x = 5;<br>
+        int y = 6;<br>
+        int z = 50;<br>
+        System.out.println(x + y + z);
+    </div>
+    You can simply write:
+    <div class="codeBlock">
+    int x = 5, y = 6, z = 50;<br>
+    System.out.println(x + y + z);
+    </div>
+    <hr>
+    One Value to Multiple Variables
+    You can also assign the same value to multiple variables in one line:
+    <div class="codeBlock">
+        int x, y, z;<br>
+        x = y = z = 50;<br>
+        System.out.println(x + y + z);
+    </div>
+    <hr>
+    Identifiers
+    All Java variables must be identified with unique names.
+
+    These unique names are called identifiers.
+
+    Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+    <div class="noteBlock">
+        It is recommended to use descriptive names in order to create understandable and maintainable code
+    </div>
+    The general rules for naming variables are:
+
+    Names can contain letters, digits, underscores, and dollar signs
+    Names must begin with a letter
+    Names should start with a lowercase letter and it cannot contain whitespace
+    Names can also begin with $ and _ (but we will not use it in this tutorial)
+    Names are case sensitive ("myVar" and "myvar" are different variables)
+    Reserved words (like Java keywords, such as int or boolean) cannot be used as names
 </body>
 </html>
