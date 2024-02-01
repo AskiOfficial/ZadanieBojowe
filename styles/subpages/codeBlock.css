@@ -37,6 +37,8 @@
 { color: #C77DBB; }
 .JClass
 { color: #34B928;}
+.ErrorCode
+{ background-color: rgba(255, 0, 0, 0.3); border-radius: 1vw; }
 
 .codeTab
 { margin-left: 3vw; }
