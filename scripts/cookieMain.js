@@ -1,4 +1,3 @@
-let _AllowedCookies = false;
 let cookie_consent = GetCookie("user_cookie_consent");
 
 if(cookie_consent == "ENABLED")
