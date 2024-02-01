@@ -3,6 +3,23 @@
     background-color: #1e1e1e;
     border-radius: 1vw;
     padding: 0.5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'Consolas';
+    font-size: 1.4vw;
+}
+.noteBlock > h1,h2,h3,h4,h5,h6
+{
+    margin: 0px;
+    padding: 0px;
+}
+.noteBlock
+{
+    background-color: #2e2004;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     font-family: 'Consolas';
     font-size: 1.4vw;
 }
