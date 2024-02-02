@@ -25,10 +25,7 @@ function SelectPanel(ID, isNorB)
     {
         lol();
     }
-    if(_AllowedCookies)
-    {
-        SetCookie("LastOpened", String(ID), 30);
-    }
+    SetCookie("LastOpened", String(ID), 30);
 }
 function SelectMain(isNorB)
 {
@@ -44,8 +41,5 @@ function SelectMain(isNorB)
     {
         lol();
     }
-    if(_AllowedCookies)
-    {
-        SetCookie("LastOpened", String(-1), 30);
-    }
+    SetCookie("LastOpened", String(-1), 30);
 }
