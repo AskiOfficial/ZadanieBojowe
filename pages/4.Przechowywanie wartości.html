@@ -19,33 +19,35 @@
     <img src="../Media/lessons/types.png" id="types_png">
     <hr>
     <h1>Deklarowanie (Tworzenie) zmiennych</h1>
-    To create a variable, you must specify the type and assign it a value:
+    Aby stworzyć zmienną musisz określić jej typ i przypisać jej jakąś wartość:
     <div class="codeBlock">
-        type variableName = value;
+        typ nazwa = wartość;
     </div>
-    Where type is one of Java's types (such as int or String), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.
-
-    To create a variable that should store text, look at the following example:
+    Gdzie <code class="keyword">typ</code> jest jednym z typów podanych wyżej, a
+    <code class="keyword">nazwa</code> jest nazwą tej zmiennej (np. x, y czy z). <br>
+    Po znaku równa się podajemy wartość którą chcemy przypisać do tej konkretnej zmiennej.
+    Poniżej jest przykład jak stworzyć zmienną przechowującą tekst:
     <div class="codeBlock">
-        String name = "John";<br>
-        System.out.println(name);
+        <code class="JClass">String</code> <code class="Var">imie</code> = <code class="string">"Bozydar"</code>;<br>
+        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">imie</code>);
     </div>
-    To create a variable that should store a number, look at the following example:
+    przykład jak stworzyć zmienną przechowującą liczbę całkowitą:
     <div class="codeBlock">
-        int myNum = 15;
-        System.out.println(myNum);
+        <code class="keyword">int</code> <code class="Var">wiek</code> = <code class="number">17</code>;<br>
+        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">wiek</code>);
     </div>
-    You can also declare a variable without assigning the value, and assign the value later:
+    Możesz również stworzyć zmienną bez przypisywania do niej wartości i zrobić to później:
     <div class="codeBlock">
-        int myNum;<br>
-        myNum = 15;<br>
-        System.out.println(myNum);
+        <code class="keyword">int</code> <code class="Var">x</code>;<br>
+        <code class="Var">x</code> = <code class="number">32</code>;<br>
+        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">x</code>);
     </div>
-    Note that if you assign a new value to an existing variable, it will overwrite the previous value:
+    Weź pod uwagę, że przypisywanie nowej wartości do już istniejącej zmiennej nadpisze jej poprzednią wartość:
     <div class="codeBlock">
-        int myNum = 15;<br>
-        myNum = 20;  // myNum is now 20<br>
-        System.out.println(myNum);
+        <code class="keyword">int</code> <code class="Var">liczba</code> = <code class="number">10</code>;<br>
+        <code class="Var">liczba</code> = <code class="number">30</code>;<br>
+        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">liczba</code>);<br>
+        <code class="comment">//Wynik w konsoli: 30</code>
     </div>
     <hr>
     Final Variables

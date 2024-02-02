@@ -41,6 +41,8 @@ code
 { color: #C77DBB; }
 .JClass
 { color: #34B928;}
+.Var
+{ color: #8795C4}
 .ErrorCode
 { background-color: rgba(255, 0, 0, 0.3); border-radius: 1vw; }
 
