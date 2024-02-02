@@ -50,11 +50,14 @@
         <code class="comment">//Wynik w konsoli: 30</code>
     </div>
     <hr>
-    Final Variables
-    If you don't want others (or yourself) to overwrite existing values, use the final keyword (this will declare the variable as "final" or "constant", which means unchangeable and read-only):
+    <h1>Zmienne niezmienne</h1>
+    Jeśli nie chcesz, aby wartość twojej zmiennej została kiedykolwiek nadpisana przez inną wartość musisz dodać tylko 
+    słowo <code class="keyword">final</code> przed typem zmiennej. Zmieni ono tą zmienną w stałą, czyli będzie można ją
+    odczytać, ale nie będzie można jej edytować w żadnym innym miejscu w kodzie niż jej deklaracja:
     <div class="codeBlock">
-        final int myNum = 15;<br>
-        myNum = 20;  // will generate an error: cannot assign a value to a final variable
+        <code class="keyword">final int</code> <code class="Var">stala</code> = <code class="number">128</code>;<br>
+        <code class="ErrorCode"><code class="Var">stala</code> = <code class="number">64</code>;</code><br>
+        <code class="comment">// Spowoduje błąd: nie można przypisać nowej wartości do stałej</code>
     </div>
     <hr>
     Other Types
