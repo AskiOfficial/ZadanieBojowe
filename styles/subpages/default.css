@@ -12,6 +12,10 @@ body, html
     color-scheme: dark;
 }
 
+img
+{
+    width: 64vw;
+}
 
 a
 { color: #0C8AC7; text-decoration: none; }
