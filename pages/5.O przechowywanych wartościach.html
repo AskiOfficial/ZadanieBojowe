@@ -1,16 +1,231 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
+    <link rel="stylesheet" href="../styles/subpages/table.css">
 </head>
+
 <body>
-    
-    <div class="codeBlock">
-        
+    <div>
+        <h1>Typy danych w Javie</h1>
+        Tak jak wytłumaczono w poprzednim rozdziale, <u>zmienna</u> w Javie musi być określonego typu danych:<br><br>
+
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">mojInt</code> = <code class="number">128</code>; <code class="comment">// Liczba całkowita</code> <br>
+            <code class="keyword">float</code> <code class="Var">mojFloat</code> = <code class="number">64.201f</code>;
+            <code class="comment">// Liczba zmiennoprzecinkowa</code> <br>
+            <code class="keyword">char</code> <code class="Var">mojChar</code> = <code class="string">'N'</code>; <code class="comment">// Znak</code> <br>
+            <code class="keyword">boolean</code> <code class="Var">mojBool</code> = <code class="keyword">true</code>;
+            <code class="comment">// Zmienna zerojedynkowa</code> <br>
+            <code class="JClass">String</code> <code class="Var">mojString</code> = <code class="string">"Jakis tekst"</code>; <code class="comment">// Tekst</code>
+        </div><br>
+
+        W Javie typy danych są podzielone na dwie grupy:<br>
+
+        <ul>
+            <li>
+                Typy danych podstawowe - <code class="keyword">byte</code>, <code class="keyword">short</code>, <code class="keyword">int</code>, <code class="keyword">long</code>, <code class="keyword">float</code>,
+                <code class="keyword">double</code>, <code class="keyword">boolean</code> i <code class="keyword">char</code><br>
+            </li>
+            <li>
+                Typy danych niestandardowe - takie jak <code class="JClass">String</code>, <u>Array</u> i <u>Class</u>
+                (o nich dowiesz się więcej w późniejszym
+                rozdziale)
+            </li>
+        </ul>
+    </div><br>
+    <hr>
+    <div>
+        <h1>Typy danych podstawowych</h1>
+        Typ danych podstawowy określa rozmiar i typ wartości zmiennej, i nie posiada dodatkowych metod.<br><br>
+        Jest osiem typów danych podstawowych w Javie:<br>
+
+
+        <table>
+            <tr>
+                <th>Typ</th>
+                <th>Rozmiar</th>
+                <th>Przechowywane wartości</th>
+            </tr>
+            <tr>
+                <td><code class="keyword">byte</code></td>
+                <td>1 bajt</td>
+                <td>Całkowite liczby od -128 do 127</td>
+            </tr>
+            <tr>
+                <td><code class="keyword">short</code></td>
+                <td>2 bajty</td>
+                <td>Całkowite liczby od -32,768 do 32,767</td>
+            </tr>
+            <tr>
+                <td><code class="keyword">int</code></td>
+                <td>4 bajty</td>
+                <td>Całkowite liczby od -2,147,483,648 do 2,147,483,647</td>
+            </tr>
+            <tr>
+                <td><code class="keyword">long</code></td>
+                <td>8 bajtów</td>
+                <td>Całkowite liczby od -9,223,372,036,854,775,808 do 9,223,372,036,854,775,807</td>
+            </tr>
+            <tr>
+                <td><code class="keyword">float</code></td>
+                <td>4 bajty</td>
+                <td>Liczby ułamkowe. Wystarczające do przechowywania 6 do 7 cyfr dziesiętnych</td>
+            </tr>
+            <tr>
+                <td><code class="keyword">double</code></td>
+                <td>8 bajtów</td>
+                <td>Liczby ułamkowe. Wystarczające do przechowywania 15 cyfr dziesiętnych</td>
+            </tr>
+            <tr>
+                <td><code class="keyword">boolean</code></td>
+                <td>1 bit</td>
+                <td>Przechowuje wartości true lub false</td>
+            </tr>
+            <tr>
+                <td><code class="keyword">char</code></td>
+                <td>2 bajty</td>
+                <td>Przechowuje pojedynczy znak/literę lub wartości ASCII</td>
+            </tr>
+        </table>
+    </div><br>
+    <hr>
+    <div>
+        <h1>Liczby</h1>
+        Typy danych liczbowych są podzielone na dwie grupy:<br><br>
+        <b>Typy całkowite</b> przechowują liczby całkowite, dodatnie lub ujemne (takie jak 123 lub -456), bez części
+        dziesiętnej. Dostępne typy to <code class="keyword">byte</code>,
+        <code class="keyword">short</code>, <code class="keyword">int</code> i
+        <code class="keyword">long</code>. Który typ powinieneś użyć, zależy od
+        wartości liczbowej.<br><br>
+
+        <b>Typy zmiennoprzecinkowe</b> reprezentują liczby z częścią ułamkową, zawierającą jedną lub więcej cyfr
+        dziesiętnych.
+        Są dwa typy: <code class="keyword">float</code> i <code class="keyword">double</code>.<br><br>
+
+        <div class="noteBlock">
+            Pomimo tego, że w Javie jest wiele typów liczbowych, najczęściej używane dla liczb to <code class="keyword">int</code> (dla liczb całkowitych) i <code class="keyword">double</code> (dla liczb
+            zmiennoprzecinkowych). Jednak opiszemy je wszystkie w miarę jak będziesz kontynuował/a czytanie.
+        </div>
+    </div><br>
+    <hr>
+    <div>
+        <h1>Typy całkowite</h1>
+
+        <h2>Byte</h2><br>
+        Typ danych byte może przechowywać liczby całkowite od -128 do 127. Może być używany zamiast int lub innych typów
+        całkowitych, aby zaoszczędzić pamięć, gdy jesteś pewien, że wartość będzie mieściła się w zakresie -128 i
+        127:<br><br>
+        <div class="codeBlock">
+            <code class="keyword">byte</code> <code class="Var">mojByte</code> = <code class="number">100</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojByte</code>);<br>
+        </div><br>
+
+        <h2>Short</h2><br>
+        Typ danych short może przechowywać liczby całkowite od -32768 do 32767:<br><br>
+        <div class="codeBlock">
+            <code class="keyword">short</code> <code class="Var">mojShort</code> = <code class="number">5000</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojShort</code>);<br>
+        </div><br>
+
+        <h2>Int</h2><br>
+        Typ danych int może przechowywać liczby całkowite od -2147483648 do 2147483647. Ogólnie, i w naszym samouczku,
+        typ danych int jest preferowanym typem danych, gdy tworzymy zmienne z wartością liczbową:<br><br>
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">mojInt</code> = <code class="number">100000</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojInt</code>);<br>
+        </div><br>
+
+        <h2>Long</h2><br>
+        Typ danych long może przechowywać liczby całkowite od -9223372036854775808 do 9223372036854775807. Jest używany,
+        gdy int nie jest wystarczająco duży, aby przechować wartość. Zauważ, że wartość jest zakończona "L":<br><br>
+        <div class="codeBlock">
+            <code class="keyword">long</code> <code class="Var">mojLong</code> = <code class="number">15000000000L</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojLong</code>);<br>
+        </div>
+    </div><br>
+    <hr>
+    <div>
+        <h1>Typy zmiennoprzecinkowe</h1>
+        Powinieneś używać typu zmiennoprzecinkowego, gdy potrzebujesz liczby z częścią dziesiętną, taką jak 9.99 lub
+        3.14515.<br><br>
+
+        <code class="keyword">Float</code> i <code class="keyword">double</code> są używane do przechowywania liczb
+        zmiennoprzecinkowych. Zauważ, że wartość musi być zakończona "f" dla float i "d" dla double:<br><br>
+
+        <h2>Przykład float:</h2>
+        <div class="codeBlock">
+            <code class="keyword">float</code> <code class="Var">mojFloat</code> = <code class="number">5.75f</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojFloat</code>);<br>
+        </div><br>
+
+        <h2>Przykład double:</h2>
+        <div class="codeBlock">
+            <code class="keyword">double</code> <code class="Var">mojDouble</code> = <code class="number">19.99d</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojDouble</code>);<br>
+        </div>
+
+        <div class="noteBlock">
+            Użyć float czy double?<br><br>
+            Precyzja wartości zmiennoprzecinkowej określa, ile cyfr wartość może mieć po przecinku. Precyzja float
+            wynosi tylko sześć lub siedem cyfr dziesiętnych, podczas gdy zmienne double mają precyzję około 15 cyfr.
+            Dlatego bezpieczniej jest używać double do większości obliczeń.
+        </div>
+    </div><br>
+    <hr>
+    <div>
+        <h1>Typ boolean</h1>
+
+        Jest bardzo często używany w programowaniu, będziesz potrzebował typ danych, który posiada tylko dwie wartości,
+        np: <br><br>
+        TAK / NIE <br>
+        ON / OFF <br>
+        PRAWDA / FAŁSZ <br><br>
+
+        Do tego, Java posiada typ danych <code class="keyword">boolean</code>, który posiada tylko dwie wartości <code class="keyword">true</code> lub <code class="keyword">false</code>:
+
+        <div class="codeBlock">
+            <code class="keyword">boolean</code> <code class="Var">czyJavaJestFajna</code> = <code class="keyword">true</code>;<br>
+            <code class="keyword">boolean</code> <code class="Var">czyNiemieckiJestFajny</code> = <code class="keyword">false</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">czyJavaJestFajna</code>); <code class="comment">// Wyświetla true</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">czyNiemieckiJestFajny</code>); <code class="comment">// Wyświetla false</code><br>
+        </div>
+    </div><br>
+    <hr>
+    <div>
+        <h1>Znaki w Jaive</h1>
+        <h2>Znaki</h2><br>
+        Typ danych char jest używany do przechowywania pojedynczego znaku. Znak musi być otoczony pojedynczymi
+        cudzysłowami, takimi jak 'A' lub 'c':
+        <div class="codeBlock">
+            <code class="keyword">char</code> <code class="Var">mojaKlasa</code> = <code class="string">'p'</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojaKlasa</code>);<br>
+        </div>
+
+        Ewentualnie, jeżeli znasz wartości ASCII, możesz użyć ich do wyświetlania określonych znaków:
+        <div class="codeBlock">
+            <code class="keyword">char</code> <code class="Var">mojaZmienna1</code> = <code class="number">65</code>,
+            <code class="Var">mojaZmienna2</code> = <code class="number">66</code>, <code class="Var">mojaZmienna3</code> = <code class="number">67</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojaZmienna1</code>);<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojaZmienna2</code>);<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojaZmienna3</code>);<br>
+        </div><br>
+
+        <h2>Tekst</h2><br>
+
+        Typ danych string jest używany do przechowywania sekwencji znaków (tekstu). Wartości string muszą być otoczone
+        podwójnymi cudzysłowami:
+        <div class="codeBlock">
+            <code class="JClass">String</code> <code class="Var">powitanie</code> = <code class="string">"Witaj Świecie"</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">powitanie</code>);<br>
+        </div>
+
     </div>
 </body>
+
 </html>

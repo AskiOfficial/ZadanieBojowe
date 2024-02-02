@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,43 @@
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
 </head>
+
 <body>
     <div>
+        <h1>Czym są komentarze?</h1>
         Komentarze mogą być użyte, aby objaśnić kod Javy i uczynić go czytelniejszym.
         Mogą być również użyte, żeby przetestować alternatywną wersję kodu. Jeśli nowa wersja by nie działała zawsze
         możesz ją usunąć i zmienić komentarz na ponownie działający kod.
-        <hr>
-        <div>
-            <h1>Komentarze jednoliniowe</h1>
-            zaczynają się z dwoma ukośnikami opadającymi w prawo (//).<br>
-            Dowolny tekst znajdujący się pomiędzy // oraz końcem linijki jest ignorowane przez Jave (nie wykona się jako kod).<br><br>
+    </div><br>
+    <hr>
+    <div>
+        <h1>Komentarze jednoliniowe</h1>
+        zaczynają się z dwoma ukośnikami opadającymi w prawo (//).<br>
+        Dowolny tekst znajdujący się pomiędzy // oraz końcem linijki jest ignorowane przez Jave (nie wykona się jako
+        kod).<br><br>
 
-            Przykłady zastosowania komentarzy jednoliniowych:
-            <div class="codeBlock">
-                <code class="comment">//To jest komentarz jednoliniowy</code><br>
-                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="string">"Hello World"</code>); 
-                <code class="comment">//To również</code>
-            </div>
-            <hr>
+        Przykłady zastosowania komentarzy jednoliniowych:
+        <div class="codeBlock">
+            <code class="comment">//To jest komentarz jednoliniowy</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="string">"Hello World"</code>);
+            <code class="comment">//To również</code>
         </div>
-        <div>
-            <h1>Komentarze wieloliniowe</h1>
-            zaczynają się /* oraz kończą się */<br>
-            Wszystko pomiędzy tymi dwoma elementami jest brane pod uwagę jako komentarz.<br>
-            <br>
-            Przykład zastosowania komentarza wieloliniowego:
-            <div class="codeBlock">
-                <code class="comment">/* Poniższy fragment kodu weźmie tekst "Hello World"<br>
+    </div><br>
+    <hr>
+    <div>
+        <h1>Komentarze wieloliniowe</h1>
+        zaczynają się /* oraz kończą się */<br>
+        Wszystko pomiędzy tymi dwoma elementami jest brane pod uwagę jako komentarz.<br>
+        <br>
+        Przykład zastosowania komentarza wieloliniowego:
+        <div class="codeBlock">
+            <code class="comment">/* Poniższy fragment kodu weźmie tekst "Hello World"<br>
                 i w sposób magiczny wypisze go na ekranie.<br> Wspaniałe, czyż nie? */</code><br>
-                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="string">"Hello World"</code>);
-            </div>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="string">"Hello World"</code>);
         </div>
     </div>
 </body>
+
 </html>

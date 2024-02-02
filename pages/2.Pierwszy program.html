@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,26 @@
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
 </head>
+
 <body>
-    W poprzednim rozdziale utworzyliśmy plik Javy, który nazwaliśmy <code class="string">Main.java</code> i użyliśmy
-    następującego kodu aby wypisać w konsoli tekst "Hello World":
-    <div class="codeBlock">
-        <code class="keyword">public class</code> <code class="JClass">Main</code> <br>
-        {<div class="codeTab">
-            <code class="keyword">public static void</code> <code class="classOrMethodName">main</code>(<code class="JClass">String</code>[] args)<br>
-            {
+    <div>
+        <h1>Pierwszy program w Javie</h1>
+        W poprzednim rozdziale utworzyliśmy plik Javy, który nazwaliśmy <code class="string">Main.java</code> i użyliśmy
+        następującego kodu aby wypisać w konsoli tekst "Hello World":
+        <div class="codeBlock">
+            <code class="keyword">public class</code> <code class="JClass">Main</code> <br>
+            {<div class="codeTab">
+                <code class="keyword">public static void</code> <code class="classOrMethodName">main</code>(<code
+                    class="JClass">String</code>[] args)<br>
+                {
                 <div class="codeTab">
-                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="string">"Hello World"</code>);
+                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                        class="string">"Hello World"</code>);
                 </div>
-            }
+                }
             </div>
-        }
+            }
+        </div><br>
     </div>
     <hr>
     <div>
@@ -33,38 +40,42 @@
             <h3>Java jest wrażliwa na wielkość liter!</h3>
             "MojaKlasa" oraz "mojaklasa" to dla komputera dwie różne rzeczy.
         </div>
-        Nazwa pliku javy powinna zgadzać się z nazwą klasy. 
+        Nazwa pliku javy powinna zgadzać się z nazwą klasy.
         Wyobraź sobie szukanie pliku z klasą "Ziemniak" mając ten plik zapisany pod inną nazwą np. "Aardappel".
         Wystarczy dopisać .java do nazwy klasy podczas zapisywania.
-        Aby móc uruchomić kod na swoim komputerze upewnij się, że Java jest poprawnie zainstalowanana (zobacz poprzedni rozdział).
+        Aby móc uruchomić kod na swoim komputerze upewnij się, że Java jest poprawnie zainstalowanana (zobacz poprzedni
+        rozdział).
         W konsoli powinien pojawić się tekst:
         <div class="codeBlock">
             Hello World
         </div>
-        <hr>
-    </div>
+    </div><br>
+    <hr>
     <div>
         <h1>Główna metoda <code class="classOrMethodName">main</code></h1>
         Metoda <code class="classOrMethodName">main</code> jest wymagana i zobaczysz ją w każdym jednym programie:
         <div class="codeBlock">
-            <code class="keyword">public static void</code> <code class="classOrMethodName">main</code>(<code class="JClass">String</code>[] args)
+            <code class="keyword">public static void</code> <code class="classOrMethodName">main</code>(<code
+                class="JClass">String</code>[] args)
         </div>
         Dowolny kod wewnątrz <code class="classOrMethodName">main</code>() się uruchomi, jeśli nie występują błędy.
-        W tym momencie nie martw się słowami kluczowymi. 
+        W tym momencie nie martw się słowami kluczowymi.
         Na razie musisz pamiętać, że każdy program musi mieć klasę i metodę main.
-        <hr>
-    </div>
+    </div><br>
+    <hr>
     <div>
         <h1><code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println()</h1>
         Wewnątrz metody main() możemy użyć wspomnianego już println(), metody używanej do wypisywania tekstu w konsoli:
 
         <div class="codeBlock">
-        <code class="keyword">public static void</code> <code class="classOrMethodName">main</code>(<code class="JClass">String</code>[] args)<br>
-        {
+            <code class="keyword">public static void</code> <code class="classOrMethodName">main</code>(<code
+                class="JClass">String</code>[] args)<br>
+            {
             <div class="codeTab">
-                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="string">"Hello World"</code>);
+                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                    class="string">"Hello World"</code>);
             </div>
-        }
+            }
         </div>
 
         <div class="noteBlock">
@@ -75,57 +86,69 @@
         <code class="JClass">System</code> jest wbudowaną w Javę klasą zawierającą przydatne elementy.
         Jest to między innymi <code class="staticOrInstance">out</code>, które oznacza
         "wyjście" (ang. output). <br>
-        Metoda println() jest używana, żeby wypisać coś w konsoli, a następnie przejść do następnej linii (lub pliku).<br>
-        Nie martw się zpecjalnie System, out i println(). Poprostu tak jest, sklejasz je razem i magicznie pojawia się tekst na ekranie.
-        <hr>
-    </div>
+        Metoda println() jest używana, żeby wypisać coś w konsoli, a następnie przejść do następnej linii (lub
+        pliku).<br>
+        Nie martw się zpecjalnie System, out i println(). Poprostu tak jest, sklejasz je razem i magicznie pojawia się
+        tekst na ekranie.
+    </div><br>
+    <hr>
     <div>
         <h1>Metoda Print()</h1>
         Istnieje również metoda print(), jedyna różnica między nią, a println() jest taka, że
-        nie przechodzi do nowej linii po wypisaniu teksu:   
+        nie przechodzi do nowej linii po wypisaniu teksu:
         <div class="codeBlock">
             <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.print("Hello World! ");<br>
-            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.print("Pisze w tej samej linii.");
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.print("Pisze w tej samej
+            linii.");
         </div>
         Wynik w konsoli:
         <div class="codeBlock">
             Hello World! Pisze w tej samej linii.
         </div>
-        <hr>
-    </div>
+    </div><br>
+    <hr>
     <div>
         <h1>Wypisywanie tekstu</h1>
         Nauczyłeś się już, jak używać metody println(), żeby wypisywać tekst w języku Java:
         <div class="codeBlock">
-            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="string">"Hello World!"</code>);
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="string">"Hello World!"</code>);
         </div>
-        <hr>
-    </div>
+    </div><br>
+    <hr>
     <div>
         <h1>Cudzysłów</h1>
         Gdy pracujesz z tekstem, musi się znajdować w cudzysłowiu. W przeciwnym wypadku Java będzie myślała,
         że próbujesz się odwołać do na przykład jakiejś zmiennej (o nich zaraz).<br>
         Jeśli o nich zapomnisz to wyskoczy błąd:
         <div class="codeBlock">
-            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="string">"Ten kod dziala!"</code>);<br>
-            <code class="ErrorCode"><code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(Ten kod powoduje blad);</code>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="string">"Ten kod dziala!"</code>);<br>
+            <code class="ErrorCode"><code class="JClass">System</code>.<code
+                class="staticOrInstance">out</code>.println(Ten kod powoduje blad);</code>
         </div>
-        <hr>
-    </div>
+    </div><br>
+    <hr>
     <div>
         <h1>Wypisywanie liczb</h1>
         println() wykorzystać można także do wypisania liczb.
         W przeciwieństwie do tekstu, nie wkładamy ich do cudzysłowia:
         <div class="codeBlock">
-            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="number">3</code>);<br>
-            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="number">64</code>);<br>
-            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="number">2137</code>);
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="number">3</code>);<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="number">64</code>);<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="number">2137</code>);
         </div>
         Również możesz wykonywać działania matematyczne wewnątrz nawiasów:
         <div class="codeBlock">
-            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="number">3</code> + <code class="number">3</code>); <code class="comment">//Wypisze: 6</code><br>
-            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="number">16</code> / <code class="number">4</code>); <code class="comment">//Wypisze: 4</code>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="number">3</code> + <code class="number">3</code>); <code class="comment">//Wypisze: 6</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="number">16</code> / <code class="number">4</code>); <code class="comment">//Wypisze: 4</code>
         </div>
     </div>
 </body>
+
 </html>

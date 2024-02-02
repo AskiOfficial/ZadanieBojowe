@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,137 +8,195 @@
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
 </head>
+
 <body>
-    zmienne są to swego rodzaju pojemniki, które służą do przechowywania danych.
-    Java posiada różne pudła na różne typy na przykład: <br>
+    <div>
+        <h1>Czym są zmienne?</h1>
+        Zmienne są to swego rodzaju pojemniki, które służą do przechowywania danych.
+        Java posiada różne pudła na różne typy na przykład: <br>
 
-    <code class="JClass">String</code> - przechowuje tekst, wartości są przechowywane w <code class="string">"cudzysłowiu"</code><br>
-    <code class="keyword">int</code> - przechowuje liczby całkowite, np. <code class="number">42</code> bądź <code class="number">-96</code><br>
-    <code class="keyword">float</code> - przechowuje liczby wymierne, z cyframi po przecinku, np. <code class="number">202.8</code> albo <code class="number">-16.81</code><br>
-    <code class="keyword">char</code> - przechowuje pojedyńczy znak, np <code class="string">'N'</code> or <code class="string">'t'</code>. Znak znajduje się pomiędzy apostrofami.<br>
-    <code class="keyword">boolean</code> - przechowuje wartość pod dwoma postaciami: <code class="keyword">true</code> lub <code class="keyword">false</code><br>
-    <img src="../Media/lessons/types.png" id="types_png">
+        <code class="JClass">String</code> - przechowuje tekst, wartości są przechowywane w <code
+            class="string">"cudzysłowiu"</code><br>
+        <code class="keyword">int</code> - przechowuje liczby całkowite, np. <code class="number">42</code> bądź <code
+            class="number">-96</code><br>
+        <code class="keyword">float</code> - przechowuje liczby wymierne, z cyframi po przecinku, np. <code
+            class="number">202.8</code> albo <code class="number">-16.81</code><br>
+        <code class="keyword">char</code> - przechowuje pojedyńczy znak, np <code class="string">'N'</code> or <code
+            class="string">'t'</code>. Znak znajduje się pomiędzy apostrofami.<br>
+        <code class="keyword">boolean</code> - przechowuje wartość pod dwoma postaciami: <code
+            class="keyword">true</code> lub <code class="keyword">false</code><br>
+        <img src="../Media/lessons/types.png" id="types_png">
+    </div><br>
     <hr>
-    <h1>Deklarowanie (Tworzenie) zmiennych</h1>
-    Aby stworzyć zmienną musisz określić jej typ i przypisać jej jakąś wartość:
-    <div class="codeBlock">
-        typ nazwa = wartość;
-    </div>
-    Gdzie <code class="keyword">typ</code> jest jednym z typów podanych wyżej, a
-    <code class="keyword">nazwa</code> jest nazwą tej zmiennej (np. x, y czy z). <br>
-    Po znaku równa się podajemy wartość którą chcemy przypisać do tej konkretnej zmiennej.
-    Poniżej jest przykład jak stworzyć zmienną przechowującą tekst:
-    <div class="codeBlock">
-        <code class="JClass">String</code> <code class="Var">imie</code> = <code class="string">"Bozydar"</code>;<br>
-        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">imie</code>);
-    </div>
-    przykład jak stworzyć zmienną przechowującą liczbę całkowitą:
-    <div class="codeBlock">
-        <code class="keyword">int</code> <code class="Var">wiek</code> = <code class="number">17</code>;<br>
-        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">wiek</code>);
-    </div>
-    Możesz również stworzyć zmienną bez przypisywania do niej wartości i zrobić to później:
-    <div class="codeBlock">
-        <code class="keyword">int</code> <code class="Var">x</code>;<br>
-        <code class="Var">x</code> = <code class="number">32</code>;<br>
-        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">x</code>);
-    </div>
-    Weź pod uwagę, że przypisywanie nowej wartości do już istniejącej zmiennej nadpisze jej poprzednią wartość:
-    <div class="codeBlock">
-        <code class="keyword">int</code> <code class="Var">liczba</code> = <code class="number">10</code>;<br>
-        <code class="Var">liczba</code> = <code class="number">30</code>;<br>
-        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">liczba</code>);<br>
-        <code class="comment">//Wynik w konsoli: 30</code>
-    </div>
+    <div>
+        <h1>Deklarowanie (Tworzenie) zmiennych</h1>
+        Aby stworzyć zmienną musisz określić jej typ i przypisać jej jakąś wartość:
+        <div class="codeBlock">
+            typ nazwa = wartość;
+        </div>
+        Gdzie <code class="keyword">typ</code> jest jednym z typów podanych wyżej, a
+        <code class="keyword">nazwa</code> jest nazwą tej zmiennej (np. x, y czy z). <br>
+        Po znaku równa się podajemy wartość którą chcemy przypisać do tej konkretnej zmiennej.
+        Poniżej jest przykład jak stworzyć zmienną przechowującą tekst:
+        <div class="codeBlock">
+            <code class="JClass">String</code> <code class="Var">imie</code> = <code
+                class="string">"Bozydar"</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="Var">imie</code>);
+        </div>
+        przykład jak stworzyć zmienną przechowującą liczbę całkowitą:
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">wiek</code> = <code class="number">17</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="Var">wiek</code>);
+        </div>
+        Możesz również stworzyć zmienną bez przypisywania do niej wartości i zrobić to później:
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">x</code>;<br>
+            <code class="Var">x</code> = <code class="number">32</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="Var">x</code>);
+        </div>
+        Weź pod uwagę, że przypisywanie nowej wartości do już istniejącej zmiennej nadpisze jej poprzednią wartość:
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">liczba</code> = <code class="number">10</code>;<br>
+            <code class="Var">liczba</code> = <code class="number">30</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="Var">liczba</code>);<br>
+            <code class="comment">//Wynik w konsoli: 30</code>
+        </div>
+    </div><br>
     <hr>
-    <h1>Zmienne niezmienne</h1>
-    Jeśli nie chcesz, aby wartość twojej zmiennej została kiedykolwiek nadpisana przez inną wartość musisz dodać tylko 
-    słowo <code class="keyword">final</code> przed typem zmiennej. Zmieni ono tą zmienną w stałą, czyli będzie można ją
-    odczytać, ale nie będzie można jej edytować w żadnym innym miejscu w kodzie niż jej deklaracja:
-    <div class="codeBlock">
-        <code class="keyword">final int</code> <code class="Var">stala</code> = <code class="number">128</code>;<br>
-        <code class="ErrorCode"><code class="Var">stala</code> = <code class="number">64</code>;</code><br>
-        <code class="comment">// Spowoduje błąd: nie można przypisać nowej wartości do stałej</code>
-    </div>
+    <div>
+        <h1>Zmienne niezmienne</h1>
+        Jeśli nie chcesz, aby wartość twojej zmiennej została kiedykolwiek nadpisana przez inną wartość musisz dodać
+        tylko
+        słowo <code class="keyword">final</code> przed typem zmiennej. Zmieni ono tą zmienną w stałą, czyli będzie można
+        ją
+        odczytać, ale nie będzie można jej edytować w żadnym innym miejscu w kodzie niż jej deklaracja:
+        <div class="codeBlock">
+            <code class="keyword">final int</code> <code class="Var">stala</code> = <code class="number">128</code>;<br>
+            <code class="ErrorCode"><code class="Var">stala</code> = <code class="number">64</code>;</code><br>
+            <code class="comment">// Spowoduje błąd: nie można przypisać nowej wartości do stałej</code>
+        </div>
+    </div><br>
     <hr>
-    <h1>Inne typy</h1>
-    <div class="codeBlock">
-        <code class="keyword">int</code> <code class="Var">mojInt</code> = <code class="number">128</code>;<br>
-        <code class="keyword">float</code> <code class="Var">mojFloat</code> = <code class="number">64.201f</code>;<br>
-        <code class="keyword">char</code> <code class="Var">mojChar</code> = <code class="string">'N'</code>;<br>
-        <code class="keyword">boolean</code> <code class="Var">mojBool</code> = <code class="keyword">true</code>;<br>
-        <code class="JClass">String</code> <code class="Var">mojString</code> = <code class="string">"Jakis tekst"</code>;
-    </div>
-    <div class="noteBlock">
-        Dowiesz się więcej o typach danych w następnym temacie.
-    </div>
+    <div>
+        <h1>Inne typy</h1>
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">mojInt</code> = <code class="number">128</code>;<br>
+            <code class="keyword">float</code> <code class="Var">mojFloat</code> = <code class="number">64.201f</code>;<br>
+            <code class="keyword">char</code> <code class="Var">mojChar</code> = <code class="string">'N'</code>;<br>
+            <code class="keyword">boolean</code> <code class="Var">mojBool</code> = <code class="keyword">true</code>;<br>
+            <code class="JClass">String</code> <code class="Var">mojString</code> = <code class="string">"Jakis tekst"</code>;
+        </div>
+        <div class="noteBlock">
+            Dowiesz się więcej o typach danych w następnym temacie.
+        </div>
+    </div><br>
     <hr>
-    <h1>Wyświetlanie zmiennych</h1>
-    The println() method is often used to display variables.
+    <div>
+        <h1>Wyświetlanie zmiennych</h1>
+        Metoda <code class="keyword">println()</code> jest często używana do wypisywania zmiennych.
+        Aby połączyć tekst z zmienną,<br>należy użyć znaku "+" :
+        <div class="codeBlock">
+            <code class="JClass">String</code> <code class="Var">imie</code> = <code
+                class="string">"Bozydar"</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="string">"Hello "</code> + <code class="Var">imie</code>);
+        </div>
+        Znaku "+" można także użyć, aby dodać jedną zmienną do drugiej:
+        <div class="codeBlock">
+            <code class="JClass">String</code> <code class="Var">imie</code> = <code
+                class="string">"Bozydar "</code>;<br>
+            <code class="JClass">String</code> <code class="Var">nazwisko</code> = <code
+                class="string">"Nowak"</code>;<br>
+            <code class="JClass">String</code> <code class="Var">imieINazwisko</code> = <code class="Var">imie</code> +
+            <code class="Var">nazwisko</code>;<br>
+            <code class="JClass">String</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="Var">imieINazwisko</code>);
+        </div>
+        Dla wartości numerycznych, znak "+" działa jako symbol matematyczny (zauważ, że używamy wartości <code
+            class="keyword">int</code> (integer)):
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">x</code> = <code class="number">5</code><br>
+            <code class="keyword">int</code> <code class="Var">y</code> = <code class="number">6</code>;<br>
+            <code class="JClass">String</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="Var">x</code> + <code class="Var">y</code>);<br>
+            <code class="comment">// Wypisuje wartość x + y</code>
+        </div>
+        Z powyższego przykładu możemy się spodziewać:<br><br>
 
-    To combine both text and a variable, use the + character:
-    <div class="codeBlock">
-        String name = "John";<br>
-        System.out.println("Hello " + name);
-    </div>
-    You can also use the + character to add a variable to another variable:
-    <div class="codeBlock">
-        String firstName = "John ";<br>
-        String lastName = "Doe";<br>
-        String fullName = firstName + lastName;<br>
-        System.out.println(fullName);
-    </div>
-    For numeric values, the + character works as a mathematical operator (notice that we use int (integer) variables here):
-    <div class="codeBlock">
-        int x = 5;<br>
-        int y = 6;<br>
-        System.out.println(x + y); // Print the value of x + y
-    </div>
-    From the example above, you can expect:
-
-    x stores the value 5
-    y stores the value 6
-    Then we use the println() method to display the value of x + y, which is 11
+        <code class="Var">x</code> przechowuje wartość <code class="number">5</code><br>
+        <code class="Var">y</code> przechowuje wartość <code class="number">6</code><br>
+        Następnie używamy metody <code class="keyword">println()</code> do wyświetlenia wartości <code
+            class="Var">x</code> + <code class="Var">y</code>, która wynosi <code class="number">11</code>
+    </div><br>
     <hr>
-    Declare Many Variables
-    To declare more than one variable of the same type, you can use a comma-separated list:
-    Instead of writing:
-    <div class="codeBlock">
-        int x = 5;<br>
-        int y = 6;<br>
-        int z = 50;<br>
-        System.out.println(x + y + z);
-    </div>
-    You can simply write:
-    <div class="codeBlock">
-    int x = 5, y = 6, z = 50;<br>
-    System.out.println(x + y + z);
-    </div>
+    <div>
+        <h1>Deklarowanie kilku zmiennych</h1>
+        Aby zadeklarować więcej niż jedną zmienną tego samego typu, można użyć listy oddzielonej przecinkiem:<br><br>
+        Zamiast pisać:
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">x</code> = <code class="number">5</code>;<br>
+            <code class="keyword">int</code> <code class="Var">y</code> = <code class="number">6</code>;<br>
+            <code class="keyword">int</code> <code class="Var">z</code> = <code class="number">50</code>;<br>
+            <code class="JClass">String</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="Var">x</code> + <code class="Var">y</code> + <code class="Var">z</code>);
+        </div>
+        Mozesz po prostu napisać:
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">x</code> = <code class="number">5</code>, <code
+                class="Var">y</code> = <code class="number">6</code>, <code class="Var">z</code> = <code
+                class="number">50</code>;<br>
+            <code class="JClass">String</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="Var">x</code> + <code class="Var">y</code> + <code class="Var">z</code>);
+        </div>
+    </div><br>
     <hr>
-    One Value to Multiple Variables
-    You can also assign the same value to multiple variables in one line:
-    <div class="codeBlock">
-        int x, y, z;<br>
-        x = y = z = 50;<br>
-        System.out.println(x + y + z);
-    </div>
+    <div>
+        <h1>Jedna wartość do kilku zmiennych</h1>
+        Możesz także przypisać tą samą wartość do kilku zmiennych w jednej linijce:
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">x</code>, <code class="Var">y</code>, <code
+                class="Var">z</code>;<br>
+            <code class="Var">x</code> = <code class="Var">y</code> = <code class="Var">z</code> = <code
+                class="number">50</code>;<br>
+            <code class="JClass">String</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="Var">x</code> + <code class="Var">y</code> + <code class="Var">z</code>);
+        </div>
+    </div><br>
     <hr>
-    Identifiers
-    All Java variables must be identified with unique names.
+    <div>
+        <h1>Identyfikatory</h1>
+        Wszystkie zmienne w Javie muszą być zidentyfikowane za pomocą unikalnych nazw.<br><br>
+        
+        Te unikalne nazwy nazywane są identyfikatorami.<br><br>
 
-    These unique names are called identifiers.
+        Identyfikatory mogą być krótkimi nazwami (jak x i y) lub bardziej opisowymi nazwami (wiek, suma, objetosc).<br>
 
-    Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
-    <div class="noteBlock">
-        It is recommended to use descriptive names in order to create understandable and maintainable code
+        <div class="noteBlock">
+            Zaleca się używanie opisowych nazw, aby stworzyć zrozumiały i łatwy do utrzymania kod:
+        </div>
+        <div class="codeBlock">
+            <code class="comment">// Dobrze</code><br>
+            <code class="keyword">int</code> <code class="Var">minutyNaGodzine</code> = <code class="number">60</code>;<br><br>
+            <code class="comment">// OK, ale nie tak łatwo zrozumieć co tak naprawdę oznacza m</code><br>
+            <code class="keyword">int</code> <code class="Var">m</code> = <code class="number">60</code>;<br>
+        </div><br>
+
+        Ogólne zasady dotyczące nazw zmiennych to:
+
+        <ul>
+            <li>Nazwy mogą zawierać litery, cyfry, podkreślenia i znaki dolara</li>
+            <li>Nazwy muszą zaczynać się od litery</li>
+            <li>Nazwy powinny zaczynać się od małej litery i nie mogą zawierać białych znaków</li>
+            <li>Nazwy mogą zaczynać się od $ i _ (ale nie będziemy tego używać w tym samouczku)</li>
+            <li>Nazwy są rozróżniane wielkością liter ("myVar" i "myvar" to różne zmienne)</li>
+            <li>Zarezerwowane słowa (jak słowa kluczowe Javy, takie jak int lub boolean) nie mogą być używane jako
+                nazwy</li>
+        </ul>
     </div>
-    The general rules for naming variables are:
-
-    Names can contain letters, digits, underscores, and dollar signs
-    Names must begin with a letter
-    Names should start with a lowercase letter and it cannot contain whitespace
-    Names can also begin with $ and _ (but we will not use it in this tutorial)
-    Names are case sensitive ("myVar" and "myvar" are different variables)
-    Reserved words (like Java keywords, such as int or boolean) cannot be used as names
 </body>
+
 </html>
