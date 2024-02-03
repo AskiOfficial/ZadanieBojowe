@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
 </head>
 <body>
-    <h1>Tablice</h1>
     używane są aby przechowywać wiele wartości w jednej zmiennej. Wyobrażasz sobie tworzyć 50 zmiennych?<br>
     Wyobraź sobie segregator w którym są kartki. Każda z kartek jest osobno, ale wszystkie są w segregatorze.
     Naszym segregatorem będą tablice.<br>
@@ -16,7 +15,8 @@
     <div class="codeBlock">
         <code class="JClass">String</code>[] <code class="Var">uczniowie</code>;
     </div>
-    Właśnie stworzyliśmy tablicę która przechowuje zmienne tekstowe.
+    Właśnie stworzyliśmy miejsce na naszą tablicę która przechowuje zmienne tekstowe.<br>
+    Teraz przydałoby się, żeby w tym miejscu była faktyczna tablica. Możemy wstawić od razu do niej wartości, albo utworzyć pustą.<br>
     Wkładamy do naszej tablicy wartości przez "otworzenie" tablicy nawiasami klamrowymi, a następnie wymiemienie wartości 
     po przecinkach w następujący sposób:
     <div class="codeBlock">
@@ -24,53 +24,82 @@
         {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
         <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};
     </div>
-    <hr>
-    <h1>Odczytywanie elementów z tablicy</h1>
-    Możesz odczytać element tablicy poprzed jego indeks, odwołując się do przykładu z segregatorem - indeks to będzie nasza
-    strona. <br>
-    Ta linijka kodu pozwoli nam odczytać pierwszy element z tablicy <code class="Var">uczniowie</code>:
+    Lub bez wkładania do niej wartości:
     <div class="codeBlock">
-        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
-        {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
-        <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
-        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>[<code class="number">0</code>]);<br>
-        <code class="comment">//Wypisze w konsoli: Natalia</code>
+        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> =
+        <code class="keyword">new</code> <code class="JClass">String</code>[<code class="number">4</code>];
     </div>
-    <div class="noteBlock">
-        <h3>Warto zapamiętać</h3>
-        Indeksy zaczynają się od 0. 
+    Tablice mają określoną wielkość, więc to co zrobiliśmy w kodzie powyżej to stworzenie pustej tablicy, która ma
+    <code class="number">4</code> miejsca na przechowanie wartości.
+    <hr>
+    <div>
+        <h1>Odczytywanie elementów z tablicy</h1>
+        Możesz odczytać element tablicy poprzed jego indeks, odwołując się do przykładu z segregatorem - indeks to będzie nasza
+        strona. <br>
+        Ta linijka kodu pozwoli nam odczytać pierwszy element z tablicy <code class="Var">uczniowie</code>:
         <div class="codeBlock">
             <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
             {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
             <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>[<code class="number">0</code>]);<br>
+            <code class="comment">//Wypisze w konsoli: Natalia</code>
         </div>
-        Pierwszy element, czyli <code class="string">"Natalia"</code>, ma indeks <code class="number">0</code><br>
-        Drugi element, czyli <code class="string">"Adam"</code>, ma indeks <code class="number">1</code><br>
-        I tak dalej...
+        <div class="noteBlock">
+            <h3>Warto zapamiętać</h3>
+            <h4>Indeksy zaczynają się od 0</h4> 
+            <div class="codeBlock">
+                <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
+                {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
+                <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
+            </div>
+            Pierwszy element, czyli <code class="string">"Natalia"</code>, ma indeks <code class="number">0</code><br>
+            Drugi element, czyli <code class="string">"Adam"</code>, ma indeks <code class="number">1</code><br>
+            I tak dalej...<br><br>
+            <h4>Tablice mają określony rozmiar</h4>
+            Nasza tablica ma <code class="number">4</code> elementy: Natalia, Adam, Maciej, Anna.<br>
+            Oznacza to, że możesz mieć w niej tylko <code class="number">4</code> wartości.<br>
+            <div class="codeBlock">
+                <code class="ErrorCode">
+                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>[<code class="number">4</code>]);
+                </code>
+            </div>
+            Ta linijka kodu spowoduje błąd, ponieważ masz tylko na cztery wartości, a próbujesz znaleźć piątą.<br>
+            To samo stanie się podczas próby przypisania wartości do indeksu 4 bo masz tylko miejsce na te 4 wartości.
+        </div>
+        <hr>
+    </div>
+    <h1>Zmiana wartości elementu w tablicy</h1>
+    Żeby zmienić konkretny element musimy odwołać się do jego indeksu:
+    <div class="codeBlock">
+        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
+        {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
+        <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
+        <code class="Var">uczniowie</code>[<code class="number">0</code>] = <code class="string">"Hania"</code>;<br>
+        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>[<code class="number">0</code>]);<br>
+        <code class="comment">// Teraz zamiast wypisać imię Natalia konsola wyświetli imię Hania</code>
     </div>
 
-    Change an Array Element
-    To change the value of a specific element, refer to the index number:
-    <div class="codeBlock">
-        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
-        cars[0] = "Opel";
-        System.out.println(cars[0]);
-        // Now outputs Opel instead of Volvo
-    </div>
-    Array Length
-    To find out how many elements an array has, use the length property:
+    <hr>
+    <h1>Wielkość tablicy</h1>
+    Możesz sprawdzić ile tablica ma miejsc na wartości kożystająć z właściwości <code class="staticOrInstance">length</code>:
 
     <div class="codeBlock">
-        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
-        System.out.println(cars.length);
-        / Outputs 4
+        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
+        {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
+        <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
+        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>.<code class="staticOrInstance">length</code>);<br>
+        <code class="comment">// Wyświetli wartość 4</code>
     </div>
-    Loop Through an Array
+    
+    <hr>
+    <h1>Przechodzenie pętlą po tablicy</h1>
     You can loop through the array elements with the for loop, and use the length property to specify how many times the loop should run.
 
     The following example outputs all elements in the cars array:
     <div class="codeBlock">
-        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
+        {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
+        <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
         for (int i = 0; i < cars.length; i++) {
         System.out.println(cars[i]);
         }
@@ -78,7 +107,9 @@
     Loop Through an Array with For-Each
     There is also a "for-each" loop, which is used exclusively to loop through elements in arrays:
     <div class="codeBlock">
-        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
+        {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
+        <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
         for (String i : cars) 
         {
             System.out.println(i);
@@ -87,49 +118,5 @@
     The example above can be read like this: for each String element (called i - as in index) in cars, print out the value of i.
 
     If you compare the for loop and for-each loop, you will see that the for-each method is easier to write, it does not require a counter (using the length property), and it is more readable.
-    
-    Multidimensional Arrays
-    A multidimensional array is an array of arrays.
-
-    Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.
-
-    To create a two-dimensional array, add each array within its own set of curly braces:
-
-    <div class="codeBlock">
-        int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
-    </div>
-    myNumbers is now an array with two arrays as its elements.
-
-    Access Elements
-    To access the elements of the myNumbers array, specify two indexes: one for the array, and one for the element inside that array. This example accesses the third element (2) in the second array (1) of myNumbers:
-    <div class="codeBlock">
-        int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
-        System.out.println(myNumbers[1][2]); // Outputs 7
-    </div>
-
-    Remember that: Array indexes start with 0: [0] is the first element. [1] is the second element, etc.
-
-    Change Element Values
-    You can also change the value of an element:
-    <div class="codeBlock">
-        int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };<br>
-        myNumbers[1][2] = 9;<br>
-        System.out.println(myNumbers[1][2]); // Outputs 9 instead of 7
-    </div>
-    Loop Through a Multi-Dimensional Array
-    We can also use a for loop inside another for loop to get the elements of a two-dimensional array (we still have to point to the two indexes):
-
-    <div class="codeBlock">
-        public class Main {
-            public static void main(String[] args) {
-              int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
-              for (int i = 0; i < myNumbers.length; ++i) {
-                for(int j = 0; j < myNumbers[i].length; ++j) {
-                  System.out.println(myNumbers[i][j]);
-                }
-              }
-            }
-          }
-    </div>
 </body>
 </html>
