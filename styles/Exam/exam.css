@@ -20,14 +20,14 @@ body, html
 
 #eTop
 {
-    width: 100%;
+    width: 100vw;
     background-color: #282828;
-    height: 4vw;
+    height: 8vh;
 }
 #eButtons
 {
-    width: 90%;
-    height: 100%;
+    width: 90vw;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -46,7 +46,7 @@ body, html
     color: white;
     padding-left: 0.7vw;
     padding-right: 0.7vw;
-    height: 3vw;
+    height: 6vh;
     width: 3.5vw;
     font-size: 1.5vw;
     border-radius: 1.5vw;
