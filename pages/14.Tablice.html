@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,34 @@
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
 </head>
+
 <body>
-    używane są aby przechowywać wiele wartości w jednej zmiennej. Wyobrażasz sobie tworzyć 50 zmiennych?<br>
-    Wyobraź sobie segregator w którym są kartki. Każda z kartek jest osobno, ale wszystkie są w segregatorze.
-    Naszym segregatorem będą tablice.<br>
-    Aby zadeklarować tablicę do typu zmiennej dodajemy nawiasy kwadratowe:
-    <div class="codeBlock">
-        <code class="JClass">String</code>[] <code class="Var">uczniowie</code>;
-    </div>
-    Właśnie stworzyliśmy miejsce na naszą tablicę która przechowuje zmienne tekstowe.<br>
-    Teraz przydałoby się, żeby w tym miejscu była faktyczna tablica. Możemy wstawić od razu do niej wartości, albo utworzyć pustą.<br>
-    Wkładamy do naszej tablicy wartości przez "otworzenie" tablicy nawiasami klamrowymi, a następnie wymiemienie wartości 
-    po przecinkach w następujący sposób:
-    <div class="codeBlock">
-        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
-        {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
-        <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};
-    </div>
-    Lub bez wkładania do niej wartości:
-    <div class="codeBlock">
-        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> =
-        <code class="keyword">new</code> <code class="JClass">String</code>[<code class="number">4</code>];
-    </div>
-    Tablice mają określoną wielkość, więc to co zrobiliśmy w kodzie powyżej to stworzenie pustej tablicy, która ma
-    <code class="number">4</code> miejsca na przechowanie wartości.
+    <div>
+        <h1>Co to Tablice?</h1>
+        używane są aby przechowywać wiele wartości w jednej zmiennej. Wyobrażasz sobie tworzyć 50 zmiennych?<br>
+        Wyobraź sobie segregator w którym są kartki. Każda z kartek jest osobno, ale wszystkie są w segregatorze.
+        Naszym segregatorem będą tablice.<br>
+        Aby zadeklarować tablicę do typu zmiennej dodajemy nawiasy kwadratowe:
+        <div class="codeBlock">
+            <code class="JClass">String</code>[] <code class="Var">uczniowie</code>;
+        </div>
+        Właśnie stworzyliśmy miejsce na naszą tablicę która przechowuje zmienne tekstowe.<br>
+        Teraz przydałoby się, żeby w tym miejscu była faktyczna tablica. Możemy wstawić od razu do niej wartości, albo utworzyć pustą.<br>
+        Wkładamy do naszej tablicy wartości przez "otworzenie" tablicy nawiasami klamrowymi, a następnie wymiemienie wartości
+        po przecinkach w następujący sposób:
+        <div class="codeBlock">
+            <code class="JClass">String</code>[] <code class="Var">uczniowie</code> =
+            {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
+            <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};
+        </div>
+        Lub bez wkładania do niej wartości:
+        <div class="codeBlock">
+            <code class="JClass">String</code>[] <code class="Var">uczniowie</code> =
+            <code class="keyword">new</code> <code class="JClass">String</code>[<code class="number">4</code>];
+        </div>
+        Tablice mają określoną wielkość, więc to co zrobiliśmy w kodzie powyżej to stworzenie pustej tablicy, która ma
+        <code class="number">4</code> miejsca na przechowanie wartości.
+    </div><br>
     <hr>
     <div>
         <h1>Odczytywanie elementów z tablicy</h1>
@@ -38,7 +43,7 @@
         strona. <br>
         Ta linijka kodu pozwoli nam odczytać pierwszy element z tablicy <code class="Var">uczniowie</code>:
         <div class="codeBlock">
-            <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
+            <code class="JClass">String</code>[] <code class="Var">uczniowie</code> =
             {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
             <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
             <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>[<code class="number">0</code>]);<br>
@@ -46,9 +51,9 @@
         </div>
         <div class="noteBlock">
             <h3>Warto zapamiętać</h3>
-            <h4>Indeksy zaczynają się od 0</h4> 
+            <h4>Indeksy zaczynają się od 0</h4>
             <div class="codeBlock">
-                <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
+                <code class="JClass">String</code>[] <code class="Var">uczniowie</code> =
                 {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
                 <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
             </div>
@@ -66,68 +71,74 @@
             Ta linijka kodu spowoduje błąd, ponieważ masz tylko na cztery wartości, a próbujesz znaleźć piątą.<br>
             To samo stanie się podczas próby przypisania wartości do indeksu 4 bo masz tylko miejsce na te 4 wartości.
         </div>
-        <hr>
-    </div>
-    <h1>Zmiana wartości elementu w tablicy</h1>
-    Żeby zmienić konkretny element musimy odwołać się do jego indeksu:
-    <div class="codeBlock">
-        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
-        {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
-        <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
-        <code class="Var">uczniowie</code>[<code class="number">0</code>] = <code class="string">"Hania"</code>;<br>
-        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>[<code class="number">0</code>]);<br>
-        <code class="comment">// Teraz zamiast wypisać imię Natalia konsola wyświetli imię Hania</code>
-    </div>
-
+    </div><br>
     <hr>
-    <h1>Wielkość tablicy</h1>
-    Możesz sprawdzić ile tablica ma miejsc na wartości kożystająć z właściwości <code class="staticOrInstance">length</code>:
-
-    <div class="codeBlock">
-        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
-        {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
-        <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
-        <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>.<code class="staticOrInstance">length</code>);<br>
-        <code class="comment">// Wyświetli wartość 4</code>
-    </div>
-    
+    <div>
+        <h1>Zmiana wartości elementu w tablicy</h1>
+        Żeby zmienić konkretny element musimy odwołać się do jego indeksu:
+        <div class="codeBlock">
+            <code class="JClass">String</code>[] <code class="Var">uczniowie</code> =
+            {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
+            <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
+            <code class="Var">uczniowie</code>[<code class="number">0</code>] = <code class="string">"Hania"</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>[<code class="number">0</code>]);<br>
+            <code class="comment">// Teraz zamiast wypisać imię Natalia konsola wyświetli imię Hania</code>
+        </div>
+    </div><br>
     <hr>
-    <h1>Przechodzenie pętlą po tablicy</h1>
-    możesz odczytywać lub przypisywać wartości z tablicy korzystając z pętli <code class="keyword">for</code>
-    i wykorzystać poznaną już właściwość <code class="staticOrInstance">length</code>, żeby wiedzieć ile razy pętla powinna się wykonać.
+    <div>
+        <h1>Wielkość tablicy</h1>
+        Możesz sprawdzić ile tablica ma miejsc na wartości kożystająć z właściwości <code class="staticOrInstance">length</code>:
 
-    Poniższy przykład wypisuje wszystkie elementy tablicy <code class="Var">uczniowie</code>:
-    <div class="codeBlock">
-        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
-        {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
-        <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
+        <div class="codeBlock">
+            <code class="JClass">String</code>[] <code class="Var">uczniowie</code> =
+            {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
+            <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>.<code class="staticOrInstance">length</code>);<br>
+            <code class="comment">// Wyświetli wartość 4</code>
+        </div>
+    </div><br>
+    <hr>
+    <div>
+        <h1>Przechodzenie pętlą po tablicy</h1>
+        możesz odczytywać lub przypisywać wartości z tablicy korzystając z pętli <code class="keyword">for</code>
+        i wykorzystać poznaną już właściwość <code class="staticOrInstance">length</code>, żeby wiedzieć ile razy pętla powinna się wykonać.
 
-        <code class="keyword">for</code>(<code class="keyword">int</code> <code class="Var">index</code> = <code class="number">0</code>;
-        <code class="Var">index</code> < <code class="Var">uczniowie</code>.<code class="staticOrInstance">length</code>;
-        <code class="Var">index</code>++)<br>
-        {
-            <div class="codeTab">
-                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>[<code class="Var">index</code>]);
-            </div>
-        }
-    </div>
-    Jest również pętla "for-each", która jest używana, żeby przechodzić po elementach tablicy bez potrzeby znania indeksu elementu:
-    <div class="codeBlock">
-        <code class="JClass">String</code>[] <code class="Var">uczniowie</code> = 
-        {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
-        <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
-        <code class="keyword">for</code>(<code class="JClass">String</code> <code class="Var">uczen</code> : <code class="Var">uczniowie</code>)<br>
-        {
+        Poniższy przykład wypisuje wszystkie elementy tablicy <code class="Var">uczniowie</code>:
+        <div class="codeBlock">
+            <code class="JClass">String</code>[] <code class="Var">uczniowie</code> =
+            {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
+            <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
+
+            <code class="keyword">for</code>(<code class="keyword">int</code> <code class="Var">index</code> = <code class="number">0</code>;
+            <code class="Var">index</code>
+            < <code class="Var">uczniowie</code>.<code class="staticOrInstance">length</code>;
+                <code class="Var">index</code>++)<br>
+                {
+                <div class="codeTab">
+                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczniowie</code>[<code class="Var">index</code>]);
+                </div>
+                }
+        </div>
+        Jest również pętla "for-each", która jest używana, żeby przechodzić po elementach tablicy bez potrzeby znania indeksu elementu:
+        <div class="codeBlock">
+            <code class="JClass">String</code>[] <code class="Var">uczniowie</code> =
+            {<code class="string">"Natalia"</code>, <code class="string">"Adam"</code>,
+            <code class="string">"Maciej"</code>, <code class="string">"Anna"</code>};<br>
+            <code class="keyword">for</code>(<code class="JClass">String</code> <code class="Var">uczen</code> : <code class="Var">uczniowie</code>)<br>
+            {
             <div class="codeTab">
                 <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">uczen</code>);
             </div>
-        }
+            }
+        </div>
+        Powyższy przykład można czytać w następujący sposób:<br>
+        Dla każdego elementu typu <code class="JClass">String</code> znajdujacego sie w tablicy <code class="Var">uczniowie</code>
+        przypisz jego wartosc do tymczasowej zmiennej <code class="Var">uczen</code> i wypisz jej wartość.
     </div>
-    Powyższy przykład można czytać w następujący sposób:<br>
-    Dla każdego elementu typu <code class="JClass">String</code> znajdujacego sie w tablicy <code class="Var">uczniowie</code>
-    przypisz jego wartosc do tymczasowej zmiennej <code class="Var">uczen</code> i wypisz jej wartość.
-    
+
     <script src="../scripts/cookiesHandler.js"></script>
     <script src="../scripts/scroll.js"></script>
 </body>
+
 </html>
