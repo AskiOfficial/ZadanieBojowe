@@ -1,4 +1,5 @@
 let selectedQuestion = 0;
+const _AmountOfQuestions = 5;
 
 const ButtonPanel = document.getElementById("eButtons");
 const QuestionsPanel = document.getElementById("eQuestion");
@@ -9,19 +10,25 @@ const QuestionButtons = document.querySelectorAll(".eSelector");
 let AssignedQuestions = { };
 let AssignedAnswers = { };
 
-for(let i = 0; i < 4; i++)
-{
-    let pytanie = Math.floor(Math.random() * QuestionsKeys.length);
-    ButtonPanel.innerHTML += `<input type="button" value="${i+1}" class="eSelector" onClick="selectQuestion(${i})">`;
-    AssignedQuestions[i] = QuestionsKeys[pytanie];
-    console.log(pytanie);
+Initialize();
 
-    //Losowanie pytań z listy (trzeba dodać, żeby się nie powtarzały ale najpierw potrzebujemy min 20 pytań
-    //w generate questions)
-    // schemat pytań {"pytanie":[index poprawnej odpowiedzi, "A", "B", "C", "D"]}
+function Initialize()
+{
+    for(let i = 0; i < _AmountOfQuestions; i++)
+    {
+        let pytanie = Math.floor(Math.random() * QuestionsKeys.length);
+        ButtonPanel.innerHTML += `<input type="button" value="${i+1}" class="eSelector" onClick="selectQuestion(${i})">`;
+        AssignedQuestions[i] = QuestionsKeys[pytanie];
+        console.log(pytanie);
+    
+        //Losowanie pytań z listy (trzeba dodać, żeby się nie powtarzały ale najpierw potrzebujemy min 20 pytań
+        //w generate questions)
+        // schemat pytań {"pytanie":[index poprawnej odpowiedzi, "A", "B", "C", "D"]}
+    }
+    selectQuestion(0);
+    console.log(AssignedQuestions);
 }
-selectQuestion(0);
-console.log(AssignedQuestions);
+
 
 function selectQuestion(id)
 {
@@ -35,13 +42,15 @@ function selectQuestion(id)
     answ2.innerHTML = Questions[AssignedQuestions[Number(id)]][2];
     answ3.innerHTML = Questions[AssignedQuestions[Number(id)]][3];
     answ4.innerHTML = Questions[AssignedQuestions[Number(id)]][4];
-    /*AnswerPanel.innerHTML = "";
-    for(let i = 1; i <= 3; i++)
-    {
-        AnswerPanel.innerHTML += Questions[QuestionsKeys[id]][i];
-    }*/
 }
 function selectAnswer(id)
 {
     AssignedAnswers[selectedQuestion] = id;
+}
+
+function Verificate()
+{
+    Array.from(Object.values()).forEach(element => {
+        
+    });
 }
