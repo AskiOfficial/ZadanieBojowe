@@ -6,12 +6,236 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
+    <link rel="stylesheet" href="../styles/subpages/table.css">
 </head>
 <body>
-    
-    <div class="codeBlock">
-        
+    <div>
+        <h1>Operatory w Javie</h1>
+        Operatory są znakami, które wykonują działania na zmiennych i wartościach. W Javie jest kilka rodzajów operatorów:<br>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Nazwa</th>
+                <th>Opis</th>
+                <th>Przykład</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>Dodawanie</td>
+                <td>Dodaje dwie wartości</td>
+                <td>2 + 3 = 5</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Odejmowanie</td>
+                <td>Odejmuje jedną wartość od drugiej</td>
+                <td>5 - 3 = 2</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Mnożenie</td>
+                <td>Mnoży dwie wartości</td>
+                <td>2 * 3 = 6</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Dzielenie</td>
+                <td>Dzieli jedną wartość przez drugą</td>
+                <td>6 / 3 = 2</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Reszta z dzielenia</td>
+                <td>Zwraca resztę z dzielenia</td>
+                <td>5 % 3 = 2</td>
+            </tr>
+            <tr>
+                <td>++</td>
+                <td>Inkrementacja</td>
+                <td>Zwiększa wartość o 1</td>
+                <td>++x</td>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>Dekrementacja</td>
+                <td>Zmniejsza wartość o 1</td>
+                <td>--x</td>
+            </tr>
+        </table><br>
+        <h2>Przykłady</h2><br>
+
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">a</code> = <code class="number">5</code>;<br>
+            <code class="keyword">int</code> <code class="Var">b</code> = <code class="number">3</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> + <code class="Var">b</code>); <code class="comment">// Pokaże 8</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> - <code class="Var">b</code>); <code class="comment">// Pokaże 2</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> * <code class="Var">b</code>); <code class="comment">// Pokaże 15</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> / <code class="Var">b</code>); <code class="comment">// Pokaże 1</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> % <code class="Var">b</code>); <code class="comment">// Pokaże 2</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(++<code class="Var">a</code>); <code class="comment">// Pokaże 6</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(--<code class="Var">a</code>); <code class="comment">// Pokaże 4</code><br>
+        </div>
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Operatory przypisania</h1>
+        Operatory przypisania służą do przypisywania wartości do zmiennych. W Javie jest kilka rodzajów operatorów przypisania:<br>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Przykład</th>
+                <th>Równoważne</th>
+            </tr>
+            <tr>
+                <td>=</td>
+                <td>x = y</td>
+                <td>x = y</td>
+            </tr>
+            <tr>
+                <td>+=</td>
+                <td>x += y</td>
+                <td>x = x + y</td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>x -= y</td>
+                <td>x = x - y</td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>x *= y</td>
+                <td>x = x * y</td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>x /= y</td>
+                <td>x = x / y</td>
+            </tr>
+            <tr>
+                <td>%=</td>
+                <td>x %= y</td>
+                <td>x = x % y</td>
+            </tr>
+        </table><br>
+        <h2>Przykłady</h2><br>
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">a</code> = <code class="number">5</code>;<br>
+            <code class="Var">a</code> += <code class="number">3</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code>); <code class="comment">// Pokaże 8</code><br>
+            <code class="Var">a</code> -= <code class="number">3</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code>); <code class="comment">// Pokaże 5</code><br>
+            <code class="Var">a</code> *= <code class="number">3</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code>); <code class="comment">// Pokaże 15</code><br>
+            <code class="Var">a</code> /= <code class="number">3</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code>); <code class="comment">// Pokaże 5</code><br>
+            <code class="Var">a</code> %= <code class="number">3</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code>); <code class="comment">// Pokaże 2</code><br>
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Operatory porównania</h1>
+        Operatory porównania służą do porównywania dwóch wartości. Zwraca wartość <code class="keyword">true</code> albo <code class="keyword">false</code>. W Javie jest kilka rodzajów operatorów porównania:<br>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Nazwa</th>
+                <th>Opis</th>
+                <th>Przykład</th>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>Równy</td>
+                <td>Porównuje, czy dwie wartości są równe</td>
+                <td>5 == 3</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>Różny</td>
+                <td>Porównuje, czy dwie wartości są różne</td>
+                <td>5 != 3</td>
+            </tr>
+            <tr>
+                <td>></td>
+                <td>Większy</td>
+                <td>Porównuje, czy jedna wartość jest większa od drugiej</td>
+                <td>5 > 3</td>
+            </tr>
+            <tr>
+                <td><</td>
+                <td>Mniejszy</td>
+                <td>Porównuje, czy jedna wartość jest mniejsza od drugiej</td>
+                <td>5 < 3</td>
+            </tr>
+            <tr>
+                <td>>=</td>
+                <td>Większy lub równy</td>
+                <td>Porównuje, czy jedna wartość jest większa lub równa drugiej</td>
+                <td>5 >= 3</td>
+            </tr>
+            <tr>
+                <td><=</td>
+                <td>Mniejszy lub równy</td>
+                <td>Porównuje, czy jedna wartość jest mniejsza lub równa drugiej</td>
+                <td>5 <= 3</td>
+            </tr>
+        </table><br>
+
+        <h2>Przykłady</h2><br>
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">a</code> = <code class="number">5</code>;<br>
+            <code class="keyword">int</code> <code class="Var">b</code> = <code class="number">3</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> == <code class="Var">b</code>); <code class="comment">// Pokaże false</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> != <code class="Var">b</code>); <code class="comment">// Pokaże true</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> > <code class="Var">b</code>); <code class="comment">// Pokaże true</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> < <code class="Var">b</code>); <code class="comment">// Pokaże false</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> >= <code class="Var">b</code>); <code class="comment">// Pokaże true</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> <= <code class="Var">b</code>); <code class="comment">// Pokaże false</code><br>
+        </div>
+    </div><br>
+    <hr>
+    <div>
+        <h1>Operatory logiczne</h1>
+        Operatory logiczne służą do łączenia wyrażeń logicznych. W Javie jest kilka rodzajów operatorów logicznych:<br>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Nazwa</th>
+                <th>Opis</th>
+                <th>Przykład</th>
+            </tr>
+            <tr>
+                <td>&&</td>
+                <td>I</td>
+                <td>Zwraca <code class="keyword">true</code>, jeśli oba wyrażenia są prawdziwe</td>
+                <td>5 > 3 && 5 < 3</td>
+            </tr>
+            <tr>
+                <td>||</td>
+                <td>Lub</td>
+                <td>Zwraca <code class="keyword">true</code>, jeśli jedno z wyrażeń jest prawdziwe</td>
+                <td>5 > 3 || 5 < 3</td>
+            </tr>
+            <tr>
+                <td>!</td>
+                <td>Negacja</td>
+                <td>Zwraca <code class="keyword">true</code>, jeśli wyrażenie jest fałszywe</td>
+                <td>!(5 > 3)</td>
+            </tr>
+        </table><br>
+
+        <h2>Przykłady</h2><br>
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">a</code> = <code class="number">5</code>;<br>
+            <code class="keyword">int</code> <code class="Var">b</code> = <code class="number">3</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> > <code class="Var">b</code> && <code class="Var">a</code> < <code class="Var">b</code>); <code class="comment">// Pokaże false</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">a</code> > <code class="Var">b</code> || <code class="Var">a</code> < <code class="Var">b</code>); <code class="comment">// Pokaże true</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(!(<code class="Var">a</code> > <code class="Var">b</code>)); <code class="comment">// Pokaże false</code><br>
+        </div>
     </div>
+    
+
     <script src="../scripts/cookiesHandler.js"></script>
     <script src="../scripts/scroll.js"></script>
 </body>
