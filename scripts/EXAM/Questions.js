@@ -1,5 +1,3 @@
-
-
 const Questions =
 {
     "Ile lat ma marek<br>" : [ 2,
@@ -14,13 +12,13 @@ const Questions =
         "XC",
         "XD"
     ],
-    "Ile ania zjadła ciastek<br>" : [4,
+    "Ile ania zjadła ciastek<br>" : [1,
         "W",
         "X",
         "Y",
         "Z",
     ],
-    "Ile Hanna zjadła ciastek<br>" : [3,
+    "Ile Hanna zjadła ciastek<br>" : [1,
         "A",
         "B",
         "C",

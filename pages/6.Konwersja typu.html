@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,47 @@
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
 </head>
+
 <body>
-    
-    <div class="codeBlock">
-        
+    <div>
+        <h1>Konwersja typu w Javie</h1>
+        Konwersja typu to przypisanie wartości jednego typu danych do innego typu.<br><br>
+        W Javie, istnieją dwa rodzaje konwersji:<br>
+        <ul>
+            <li>Konwersja rozszerzająca (automatyczna) - konwertowanie mniejszego typu na większy typ rozmiaru</li>
+            <code class="keyword">byte</code> → <code class="keyword">short</code> → <code class="keyword">char</code> → <code class="keyword">int</code> → <code class="keyword">long</code> → <code class="keyword">float</code> → <code class="keyword">double</code>
+            <br><br>
+            <li>Konwersja zawężająca (ręczna) - konwertowanie większego typu na mniejszy typ rozmiaru </li>
+            <code class="keyword">double</code> → <code class="keyword">float</code> → <code class="keyword">long</code> → <code class="keyword">int</code> → <code class="keyword">char</code> → <code class="keyword">short</code> → <code class="keyword">byte</code>
+        </ul>
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Konwersja rozszerzająca</h1>
+        Konwersja rozszerzająca jest wykonywana automatycznie, gdy przekazujemy mniejszy typ danych do większego typu danych:<br>
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">mojInt</code> = <code class="number">9</code>;<br>
+            <code class="keyword">double</code> <code class="Var">mojDouble</code> = <code class="Var">mojInt</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojInt</code>); <code class="comment">// Pokaże 9</code> <br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojDouble</code>); <code class="comment">// Pokaże 9.0</code><br>
+        </div>
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Konwersja zawężająca</h1>
+        Konwersja zawężająca musi być wykonana ręcznie poprzez umieszczenie typu w nawiasach przed wartością:<br>
+        <div class="codeBlock">
+            <code class="keyword">double</code> <code class="Var">mojDouble</code> = <code class="number">9.78d</code>;<br>
+            <code class="keyword">int</code> <code class="Var">mojInt</code> = (<code class="keyword">int</code>) <code class="Var">mojDouble</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojDouble</code>); <code class="comment">// Pokaże 9.78</code><br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">mojInt</code>); <code class="comment">// Pokaże 9</code> <br>
+        </div>
     </div>
+
     <script src="../scripts/cookiesHandler.js"></script>
     <script src="../scripts/scroll.js"></script>
 </body>
+
 </html>
