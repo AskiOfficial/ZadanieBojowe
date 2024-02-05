@@ -5,6 +5,8 @@ const ButtonPanel = document.getElementById("eButtons");
 const QuestionsPanel = document.getElementById("eQuestion");
 const AnswerPanel = document.getElementById("eAnswer");
 
+const AnswerDIVs = document.querySelectorAll(".eA");
+
 let AssignedQuestions = { };
 let AssignedAnswers = { };
     for(let i = 0; i < _AmountOfQuestions; i++)
@@ -47,8 +49,22 @@ function selectQuestion(id)
     
     answ1.innerHTML = Questions[AssignedQuestions[Number(id)]][1];
     answ2.innerHTML = Questions[AssignedQuestions[Number(id)]][2];
-    answ3.innerHTML = Questions[AssignedQuestions[Number(id)]][3];
-    answ4.innerHTML = Questions[AssignedQuestions[Number(id)]][4];
+
+    if(Questions[AssignedQuestions[Number(id)]][3] == "#*#")
+        AnswerDIVs[2].style.display = "none";
+    else
+    {
+        AnswerDIVs[2].style.display = "flex";
+        answ3.innerHTML = Questions[AssignedQuestions[Number(id)]][3];
+    }
+
+    if(Questions[AssignedQuestions[Number(id)]][4] == "#*#")
+        AnswerDIVs[3].style.display = "none";
+    else
+    {
+        AnswerDIVs[3].style.display = "flex";
+        answ4.innerHTML = Questions[AssignedQuestions[Number(id)]][4];
+    }
 
     if(AssignedAnswers[selectedQuestion] != 0)
         QuestionButtons[selectedQuestion].style.setProperty("--CurrentColor", "#0a1e31");

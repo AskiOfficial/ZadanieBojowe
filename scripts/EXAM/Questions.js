@@ -45,6 +45,14 @@ Questions[pyt] = [4,
     `Wszystkie podane fragmenty kodu wypisują tylko liczby nieparzyste`
 ]
 
+pyt = `NIGMA`
+Questions[pyt] = [1,
+    `Tak`,
+    `Nie`,
+    `#*#`,
+    `#*#`
+]
+
 
 
 const QuestionsKeys = Array.from(Object.keys(Questions));
