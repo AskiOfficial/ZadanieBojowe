@@ -6,12 +6,155 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
+    <link rel="stylesheet" href="../styles/subpages/table.css">
 </head>
 <body>
+    Już wiesz, że Java obsługuje zwykłe warunki logiczne z matematyki:
     
+    <table>
+        <tr>
+            <td>Mniej niż</td>
+            <td>x [jest mniejsze od] y</td>
+            <td>x < y</td>
+        </tr>
+        <tr>
+            <td>Mniej lub tyle samo co</td>
+            <td>x [jest mniejsze bądź równe] y</td>
+            <td>x <= y</td>
+        </tr>
+        <tr>
+            <td>Więcej niż</td>
+            <td>x [jest większe od] y</td>
+            <td>x > y</td>
+        </tr>
+        <tr>
+            <td>Więcej niż</td>
+            <td>x [jest większe bądź równe] y</td>
+            <td>x >= y</td>
+        </tr>
+        <tr>
+            <td>Tyle samo</td>
+            <td>x [jest równe] y</td>
+            <td>x == y</td>
+        </tr>
+        <tr>
+            <td>Inne niż</td>
+            <td>x [jest różne od] y</td>
+            <td>x != y</td>
+        </tr>
+    </table>
+    Możesz użyć tych warunków, żeby podejmować różne akcje w zależności od wartości.
+    Java posiada następujące wyrażenia warunkowe:<br>
+    <code class="keyword">if</code> (jeśli) - blok kodu który wykona się jeśli warunek jest spełniony.<br>
+    <code class="keyword">else if</code> (w przeciwnym wypadku, jeśli) - blok kodu który wykona się, gdy nowy warunek zostanie spełniony ORAZ pierwszy warunek nie zostanie spełniony<br>
+    <code class="keyword">else</code> (w przeciwnym wypadku) - blok kodu który wykona się, kiedy żaden z powyżej postawionych warunków się nie spełni.<br>
+    <code class="keyword">switch</code> - określa wiele alternatywnych bloków kodu do wykonania. Więcej o switchu w następnym temacie.<br>
+
+    <hr>
+    <h1><code class="keyword">if</code> - jeśli</h1>
+    
+    Użyj warunku jeśli, żeby oznaczyć fragment kodu który wykona się tylko jeśli warunek będzie spełniony.
     <div class="codeBlock">
-        
+        <code class="keyword">if</code>(warunek)<br>
+        {
+            <div class="codeTab">
+                <code class="comment">
+                    // blok kodu który wykona się, jeśli warunek się spełni
+                </code>
+            </div>
+        }
     </div>
+    Note that if is in lowercase letters. Uppercase letters (If or IF) will generate an error.
+
+    In the example below, we test two values to find out if 20 is greater than 18. If the condition is true, print some text:
+    <div class="codeBlock">
+        if (20 > 18) {
+            System.out.println("20 is greater than 18");
+        }
+        //Also we can do this with variables
+        int x = 20;
+        int y = 18;
+        if (x > y) {
+            System.out.println("x is greater than y");
+        }
+    </div>
+    Example explained
+    In the example above we use two variables, x and y, to test whether x is greater than y (using the > operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".
+
+    The else Statement
+    Use the else statement to specify a block of code to be executed if the condition is false.
+
+    <div class="codeBlock">
+        if (condition) {
+            // block of code to be executed if the condition is true
+          } else {
+            // block of code to be executed if the condition is false
+          }
+    </div>
+    <div class="codeBlock">
+        int time = 20;
+        if (time < 18) {
+          System.out.println("Good day.");
+        } else {
+          System.out.println("Good evening.");
+        }
+        // Outputs "Good evening."
+    </div>
+    Example explained
+    In the example above, time (20) is greater than 18, so the condition is false. Because of this, we move on to the else condition and print to the screen "Good evening". If the time was less than 18, the program would print "Good day".
+    
+    The else if Statement
+    Use the else if statement to specify a new condition if the first condition is false.
+    <div class="codeBlock">
+        if (condition1) {
+            // block of code to be executed if condition1 is true
+          } else if (condition2) {
+            // block of code to be executed if the condition1 is false and condition2 is true
+          } else {
+            // block of code to be executed if the condition1 is false and condition2 is false
+          }
+    </div>
+    <div class="codeBlock">
+        int time = 22;
+        if (time < 10) {
+            System.out.println("Good morning.");
+        } else if (time < 18) {
+            System.out.println("Good day.");
+        } else {
+            System.out.println("Good evening.");
+        }
+        // Outputs "Good evening."
+    </div>
+
+    Example explained
+    In the example above, time (22) is greater than 10, so the first condition is false. The next condition, in the else if statement, is also false, so we move on to the else condition since condition1 and condition2 is both false - and print to the screen "Good evening".
+
+    However, if the time was 14, our program would print "Good day."
+
+    Short Hand If...Else
+    There is also a short-hand if else, which is known as the ternary operator because it consists of three operands.
+
+    It can be used to replace multiple lines of code with a single line, and is most often used to replace simple if else statements:
+
+    <div class="codeBlock">
+        variable = (condition) ? expressionTrue :  expressionFalse;
+    </div>
+
+    Zamiast pisać:
+    <div class="codeBlock">
+        int time = 20;
+        if (time < 18) {
+            System.out.println("Good day.");
+        } else {
+            System.out.println("Good evening.");
+        }
+    </div>
+    <div class="codeBlock">
+        int time = 20;
+        String result = (time < 18) ? "Good day." : "Good evening.";
+        System.out.println(result);
+    </div>
+
     <script src="../scripts/cookiesHandler.js"></script>
     <script src="../scripts/scroll.js"></script>
 </body>
