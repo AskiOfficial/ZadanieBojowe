@@ -17,7 +17,7 @@ code
 .EcodeBlock
 {
     background-color: #1e1e1e;
-    border-radius: 1vw;
+    border-radius: 3vh;
     padding: 0.5vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -60,5 +60,7 @@ code
 .ErrorCode
 { background-color: rgba(255, 0, 0, 0.3); border-radius: 1vw; }
 
-.codeTab
+.codeBlock .codeTab
 { margin-left: 3vw; }
+.EcodeBlock .codeTab
+{ margin-left: 2vw; }
