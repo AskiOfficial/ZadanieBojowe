@@ -1,28 +1,18 @@
+let StaredExam = true;
+
 const Questions =
 {
-    "Ile lat ma marek<br>" : [ 2,
-        "NIGER",
-        "NIGGER",
-        "NIGGGER",
-        "NIER"
+    "Co wypisze w konsoli poniższy fragment kodu:    <div class=\"EcodeBlock\"><code class=\"JClass\">System</code>.<code class=\"staticOrInstance\">out</code>.println(<code class=\"string\">\"3\"</code> + (<code class=\"number\">5d</code>/<code class=\"number\">100d</code>));</div>" : [ 1,
+        "30.05",
+        "3.05",
+        "35d/100d",
+        "Kod się nie uruchomi przez błąd"
     ],
     "Ile bożena przyniosła ciastek<br>" : [1, 
-        "XA",
-        "XB",
-        "XC",
-        "XD"
+        "To jest maksymalna długość odpowiedzi dla przykładowego pytania i zalecane jest unikanie przejścia do nowej linii chyba, że to konieczne",
+        "To jest maksymalna długość odpowiedzi dla przykładowego pytania i zalecane jest unikanie przejścia do nowej linii chyba, że to konieczne",
+        "To jest maksymalna długość odpowiedzi dla przykładowego pytania i zalecane jest unikanie przejścia do nowej linii chyba, że to konieczne",
+        "To jest maksymalna długość odpowiedzi dla przykładowego pytania i zalecane jest unikanie przejścia do nowej linii chyba, że to konieczne"
     ],
-    "Ile ania zjadła ciastek<br>" : [1,
-        "W",
-        "X",
-        "Y",
-        "Z",
-    ],
-    "Ile Hanna zjadła ciastek<br>" : [1,
-        "A",
-        "B",
-        "C",
-        "D",
-    ]
 }
 const QuestionsKeys = Array.from(Object.keys(Questions));

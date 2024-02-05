@@ -11,6 +11,20 @@ code
     margin-bottom: 1vh;
     font-family: 'Consolas';
     font-size: 1.4vw;
+
+    text-align: left;
+}
+.EcodeBlock
+{
+    background-color: #1e1e1e;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'Consolas';
+    font-size: 2vh;
+
+    text-align: left;
 }
 .noteBlock > h1,h2,h3,h4,h5,h6
 {

@@ -5,15 +5,8 @@ const ButtonPanel = document.getElementById("eButtons");
 const QuestionsPanel = document.getElementById("eQuestion");
 const AnswerPanel = document.getElementById("eAnswer");
 
-const QuestionButtons = document.querySelectorAll(".eSelector");
-
 let AssignedQuestions = { };
 let AssignedAnswers = { };
-
-Initialize();
-
-function Initialize()
-{
     for(let i = 0; i < _AmountOfQuestions; i++)
     {
         let pytanie = Math.floor(Math.random() * QuestionsKeys.length);
@@ -25,12 +18,17 @@ function Initialize()
         //w generate questions)
         // schemat pytań {"pytanie":[index poprawnej odpowiedzi, "A", "B", "C", "D"]}
     }
-    selectQuestion(0);
-}
+const QuestionButtons = document.querySelectorAll(".eSelector");
+selectQuestion(0);
 
 
 function selectQuestion(id)
 {
+    if(AssignedAnswers[selectedQuestion] != 0)
+        QuestionButtons[selectedQuestion].style.setProperty("--CurrentColor", "#123456");
+    else
+        QuestionButtons[selectedQuestion].style.setProperty("--CurrentColor", "#282828");
+
     const answ1 = document.getElementById("answ1");
     const answ2 = document.getElementById("answ2");
     const answ3 = document.getElementById("answ3");
@@ -51,23 +49,34 @@ function selectQuestion(id)
     answ2.innerHTML = Questions[AssignedQuestions[Number(id)]][2];
     answ3.innerHTML = Questions[AssignedQuestions[Number(id)]][3];
     answ4.innerHTML = Questions[AssignedQuestions[Number(id)]][4];
+
+    if(AssignedAnswers[selectedQuestion] != 0)
+        QuestionButtons[selectedQuestion].style.setProperty("--CurrentColor", "#0a1e31");
+    else
+        QuestionButtons[selectedQuestion].style.setProperty("--CurrentColor", "#141414");
 }
 function selectAnswer(id)
 {
     AssignedAnswers[selectedQuestion] = id;
+    QuestionButtons[selectedQuestion].style.setProperty("--CurrentColor", "#123456");
+    selectQuestion(selectedQuestion);
 }
 
 function Verificate()
 {
+    StaredExam = false;
+    let correct = 0;
     for(let i = 0; i < _AmountOfQuestions; i++)
     {
         if(Questions[AssignedQuestions[i]][0] == AssignedAnswers[i])
         {
             console.log("Tak");
+            correct++;
         }
         else
         {
             console.log("NIE");
         }
     }
+    alert((correct / _AmountOfQuestions)*100 + "%");
 }

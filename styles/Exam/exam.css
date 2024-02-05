@@ -2,7 +2,6 @@
 
 :root
 {
-    --CurrentHoverColor: #123456;
     --CurrentColor: #282828;
 }
 
@@ -38,11 +37,11 @@ body, html
     height: 92vh;
     width: 100vw;
     background-color: #12345641;
+    overflow-y: auto;
 }
 
 .eSelector
 {
-    background-color: #282828;
     color: white;
     padding-left: 0.7vw;
     padding-right: 0.7vw;
@@ -76,7 +75,7 @@ body, html
     color: white;
     padding-left: 0.7vw;
     padding-right: 0.7vw;
-    height: 3vw;
+    height: 6vh;
     width: 7vw;
     font-size: 1.5vw;
     border-radius: 1.5vw;
@@ -88,4 +87,60 @@ body, html
 #eWyślijButton:hover
 {
     background-color: #F8981D;
+}
+
+
+
+
+
+
+
+
+#eQuestion
+{
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    -webkit-user-select: none;
+
+    font-size: 3vh;
+
+    width: 96vw;
+    margin: auto;
+}
+
+#eAnswer
+{
+    -webkit-user-select: none;
+    width: 100vw;
+}
+#eAnswer > div
+{
+    width: 96vw; 
+    margin: auto; 
+    margin-top: 1.75vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#eAnswer > div > label
+{
+    text-align: center;
+    padding: 1.5vh;
+    width: 80vw; 
+
+    border-bottom: inset #CF8E6D 0.5vh;
+    border-radius: 4vh;
+    box-shadow: 0vw 0.25vh 0.75vh #CF8E6D;
+
+    font-size: 2vh;
+    font-family: consolas;
+}
+#eAnswer > div > input[type="radio"]
+{ display: none; }
+#eAnswer > div > input[type="radio"]:checked+label
+{
+    border-bottom: inset #2AACB8 0.5vh;
+    box-shadow: 0vw 0.25vh 0.75vh #2AACB8;
 }
