@@ -28,7 +28,7 @@
             <td>x > y</td>
         </tr>
         <tr>
-            <td>Więcej niż</td>
+            <td>Więcej lub tyle samo co</td>
             <td>x [jest większe bądź równe] y</td>
             <td>x >= y</td>
         </tr>
@@ -46,8 +46,8 @@
     Możesz użyć tych warunków, żeby podejmować różne akcje w zależności od wartości.
     Java posiada następujące wyrażenia warunkowe:<br>
     <code class="keyword">if</code> (jeśli) - blok kodu który wykona się jeśli warunek jest spełniony.<br>
-    <code class="keyword">else if</code> (w przeciwnym wypadku, jeśli) - blok kodu który wykona się, gdy nowy warunek zostanie spełniony ORAZ pierwszy warunek nie zostanie spełniony<br>
     <code class="keyword">else</code> (w przeciwnym wypadku) - blok kodu który wykona się, kiedy żaden z powyżej postawionych warunków się nie spełni.<br>
+    <code class="keyword">else if</code> (w przeciwnym wypadku, jeśli) - blok kodu który wykona się, gdy nowy warunek zostanie spełniony ORAZ pierwszy warunek nie zostanie spełniony<br>
     <code class="keyword">switch</code> - określa wiele alternatywnych bloków kodu do wykonania. Więcej o switchu w następnym temacie.<br>
 
     <hr>
@@ -64,24 +64,49 @@
             </div>
         }
     </div>
-    Note that if is in lowercase letters. Uppercase letters (If or IF) will generate an error.
+    <div class="noteBlock">
+        <code class="keyword">if</code> składa się z samych małych liter. Użycie If/iF/IF spowoduje błąd.
+    </div>
 
-    In the example below, we test two values to find out if 20 is greater than 18. If the condition is true, print some text:
+    W poniższym przykładzie porównujemy dwie wartości i wypisujemy jakiś tekst:
     <div class="codeBlock">
-        if (20 > 18) {
-            System.out.println("20 is greater than 18");
-        }
-        //Also we can do this with variables
-        int x = 20;
-        int y = 18;
-        if (x > y) {
-            System.out.println("x is greater than y");
+        <code class="keyword">if</code>(<code class="number">64</code> > <code class="number">32</code>)
+            <div class="codeTab">
+                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="string">"64 jest wieksze od 32"</code>);
+            </div>
+        <br>
+        <code class="comment">
+            //Również w ten sposób możemy porównywać zmienne
+        </code><br>
+        <code class="keyword">int</code> <code class="Var">x</code> = <code class="number">128</code>;<br>
+        <code class="keyword">int</code> <code class="Var">y</code> = <code class="number">256</code>;<br>
+        <code class="keyword">if</code>(<code class="Var">x</code> < <code class="Var">y</code>)<br>
+        {
+            <div class="codeTab">
+                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                    class="string">"128 jest mniejsze od 256"</code>);
+            </div>
         }
     </div>
-    Example explained
-    In the example above we use two variables, x and y, to test whether x is greater than y (using the > operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".
+    <div class="noteBlock">
+        <h3>Gdzie się podziały nawiasy klamrowe</h3>
+        W pierwszym przykładzie powyżej zniknęły nawiasy obok <code class="keyword">if</code>. Czy to jest poprawne? W tym przypadku tak.<br>
+        Jeśli warunkowa jest tylko jedna linijka kodu nie potrzebujesz otwierać specjalnie dla niej klamerek.
+        <div class="codeBlock">
+            <code class="keyword">if</code>(<code class="number">16</code> > <code class="number">8</code>)
+            <div class="codeTab">
+                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="string">"16 jest wieksze od 8"</code>);
+            </div>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code
+                class="string">"Wykonam sie nawet jesli warunek nie zostanie spelniony"</code>);
+        </div>
+        Każda następna linikja wykona się niezależnie od warunku.
+    </div>
 
-    The else Statement
+    <hr>
+    <h1><code class="keyword">else</code> - w przeciwnym wypadku</h1>
     Use the else statement to specify a block of code to be executed if the condition is false.
 
     <div class="codeBlock">
