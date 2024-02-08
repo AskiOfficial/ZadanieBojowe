@@ -8,45 +8,66 @@
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
 </head>
 <body>
-    <div id="eTop">
-        <div id="eButtons">
-            
+    <div id="main">
+        <div id="eTop">
+            <div id="eButtons">
+                
+            </div>
+            <div id="eWyślij">
+                <button id="eWyślijButton" onclick="Verificate()">Wyślij</button>
+            </div>
         </div>
-        <div id="eWyślij">
-            <button id="eWyślijButton" onclick="Verificate()">Wyślij</button>
+        <div id="eBottom">
+            <div id="eQuestion">
+    
+            </div>
+            <div id="eAnswer">
+                <div class="eA">
+                    <input type="radio" name="answer" class="answ" id="a1" onclick="selectAnswer(1)">
+                    <label for="a1" id="answ1"></label>
+                </div>
+                <div class="eA">
+                    <input type="radio" name="answer" class="answ" id="a2" onclick="selectAnswer(2)">
+                    <label for="a2" id="answ2"></label>
+                </div>
+                <div class="eA">
+                    <input type="radio" name="answer" class="answ" id="a3" onclick="selectAnswer(3)">
+                    <label for="a3" id="answ3"></label>
+                </div>
+                <div class="eA">
+                    <input type="radio" name="answer" class="answ" id="a4" onclick="selectAnswer(4)">
+                    <label for="a4" id="answ4"></label>
+                </div>
+            </div>
         </div>
+        <div id="eLooser">
+            <div id="inside">
+                <h1 class="flexBr">
+                    NIE OSZUKUJ!
+                </h1>
+                <h4 class="flexBr">
+                    Ponieważ próbowałeś/aś oszukiwać w trakcie testu możesz spróbować ponownie za godzinę
+                </h4>
+            </div>
+        </div>
+        <div id="eWait">
+            <div id="inside">
+                <h1 class="flexBr">
+                    NIE OSZUKUJ!
+                </h1>
+                <h3 class="flexBr" id="h3try_again_in">
+                    Ponieważ próbowałeś/aś oszukiwać w trakcie testu możesz spróbować ponownie za godzinę
+                </h3>
+        </div>
+        <audio src="../Media/Gratulacje użytkowniku.mp3" id="elostAudio"></audio>
     </div>
-    <div id="eBottom">
-        <div id="eQuestion">
+    
 
-        </div>
-        <div id="eAnswer">
-            <div class="eA">
-                <input type="radio" name="answer" class="answ" id="a1" onclick="selectAnswer(1)">
-                <label for="a1" id="answ1"></label>
-            </div>
-            <div class="eA">
-                <input type="radio" name="answer" class="answ" id="a2" onclick="selectAnswer(2)">
-                <label for="a2" id="answ2"></label>
-            </div>
-            <div class="eA">
-                <input type="radio" name="answer" class="answ" id="a3" onclick="selectAnswer(3)">
-                <label for="a3" id="answ3"></label>
-            </div>
-            <div class="eA">
-                <input type="radio" name="answer" class="answ" id="a4" onclick="selectAnswer(4)">
-                <label for="a4" id="answ4"></label>
-            </div>
-        </div>
-    </div>
-
-    <div id="eLooser">   
-        
-    </div>
+    
 
     <script src="../scripts/EXAM/Questions.js"></script>
     <script src="../scripts/EXAM/questionsAndAnswers.js"></script>
-    <script src="../scripts/EXAM/noTabSwich.js"></script>
     <script src="../scripts/cookiesHandler.js"></script>
+    <script src="../scripts/EXAM/noTabSwich.js"></script>
 </body>
 </html>

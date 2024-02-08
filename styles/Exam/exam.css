@@ -19,7 +19,11 @@ body, html
     margin: 0px;
     overflow: hidden;
 }
-
+#main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
 #eTop
 {
     width: 100vw;
@@ -123,10 +127,14 @@ body, html
         color: white;
         padding-left: 1.4vw;
         padding-right: 1.4vw;
+
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+
         height: 6vh;
-        width: 8.5vw;
-        font-size: 1.5vh;
-        border-radius: 1.5vw;
+        width: 8vw;
+        font-size: 2vh;
+        border-radius: 3vh;
         border-width: 0.2vw;
         border-color: #F8981D;
         border-style: groove;
@@ -147,19 +155,23 @@ body, html
         color: white;
         padding-left: 0.7vw;
         padding-right: 0.7vw;
-        height: 6vh;
+        height: 8vh;
         width: 9vw;
-        font-size: 2.7vw;
-        border-radius: 1.5vw;
+        font-size: 1.4vh;
+        border-radius: 3vh;
         border-width: 0.2vw;
         border-color: #F8981D;
         border-style: groove;
         text-align: center;
     }
+    #eBottom
+    {
+        height: 87vh;
+        width: 100vw;
+        background-color: #12345641;
+        overflow-y: auto;
+    }
 }
-
-
-
 
 
 
@@ -211,4 +223,53 @@ body, html
 {
     border-bottom: inset #2AACB8 0.5vh;
     box-shadow: 0vw 0.25vh 0.75vh #2AACB8;
+}
+
+
+
+#eLooser, #eWait
+{
+    transform: translateY(-100vh);
+    position: absolute;
+    
+    width: 100vw;
+    height: 100vh;
+
+    backdrop-filter: blur(0.5vw);
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+}
+#eLooser > #inside, #eWait > #inside
+{
+    color: white;
+
+    position: absolute;
+    padding: 2vw;
+    width: 50vw;
+    height: 28vh;
+
+    text-align: center;
+
+    background-color: #141414;
+    border-color: #282828;
+    border-width: 0.4vw;
+    border-style: solid;
+    border-radius: 10vw;
+
+    box-shadow: 0vw 0vw 0.7vw 0.05vw rgb(162, 162, 162);
+
+    font-size: 3vh;
+}
+#inside > h1,h2,h3,h4,h5,h6
+{
+    padding: 0px;
+    margin: 0px;
+}
+#acceptCookies > #inside > .flexBr
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

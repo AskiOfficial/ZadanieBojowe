@@ -1,17 +1,31 @@
 let changedStie = 0;
+const DEV_MODE = false;
+
+if(GetCookie("tryAgain") == "yes" && !DEV_MODE)
+{
+    StaredExam = false;
+    document.getElementById("eWait").style.display = "flex";
+    const waitDate = new Date(GetCookie("mayTryAgain"));
+    console.log(waitDate);
+    document.getElementById("h3try_again_in").innerHTML = `Możesz ponownie przystąpić do testu <br>${waitDate.toLocaleString()}`
+}
 
 window.addEventListener("blur", () => {
     if(StaredExam)
     {
         changedStie++;
         document.title = `Oj zjebałeś kolego! - ${changedStie}`;
-    }
-});
+        document.getElementById("elostAudio").play();
 
-// when the user's focus is back to your tab (website) again
-window.addEventListener("focus", () => {
-    if(StaredExam)
-    {
-        document.title = "W trakcie testu";
+        if(!DEV_MODE)
+        {
+            document.getElementById("eLooser").style.display = "flex";
+            
+            SetCookie("tryAgain", "yes", (1/24));
+    
+            const data = new Date();
+            data.setTime(data.getTime() + (60*60*1000));
+            SetCookie("mayTryAgain", data.toUTCString(), (1/24));
+        }
     }
 });
