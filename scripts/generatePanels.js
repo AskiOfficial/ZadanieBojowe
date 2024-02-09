@@ -10,7 +10,6 @@ const Panels =
     "Operatory" : "Arytmetyka",
     "Nici" : "Ciągi znaków",
     "Matematyka" : "funkcje matematyczne oraz liczby losowe",
-    "Prawda czy fałsz" : "Boolean",
     "Warunek jeśli" : "Jeśli {...} W przeciwnym razie {...}",
     "Przełącznik" : "Switche",
     "Pętle" : "FOR, WHILE, CONTINUE oraz BREAK",
