@@ -1,18 +1,169 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
+    <link rel="stylesheet" href="../styles/subpages/table.css">
 </head>
+
 <body>
-    
-    <div class="codeBlock">
+    <div>
+        <h1>Nici w Javie</h1>
+
+        Nici, lub łańcuchy znaków (String), są używane do przechowywania tekstu.<br><br>
+
+        Zmienna typu <code class="keyword">String</code> zawiera zbiór znaków otoczonych podwójnymi cudzysłowami:<br><br>
+
+        <div class="codeBlock">
+            <code class="JClass">String</code> <code class="Var">imie</code> = <code class="string">"Bozydar"</code>
+        </div>
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Metody łańcuchów znaków</h1>
+        String w Javie jest obiektem i zawiera metody, które mogą wykonywać określone operacje na łańcuchach znaków.
+
+        <ul class="methods">
+            <li>
+                <h2>Metoda <code class="keyword">length()</code></h2>
+                Metoda <code class="keyword">length()</code> zwraca długość łańcucha znaków:<br><br>
+
+                <div class="codeBlock">
+                    <code class="JClass">String</code> <code class="Var">imie</code> = <code class="string">"Bozydar"</code>;<br>
+                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">imie</code>.<code class="keyword">length()</code>);
+                    <code class="comment">// Wypisze 7</code>
+                </div>
+            </li>
+            <li>
+                <h2>Metody <code class="keyword">toUpperCase()</code> i <code class="keyword">toLowerCase()</code></h2>
+                Metoda <code class="keyword">toUpperCase()</code> zwraca łańcuch znaków z dużymi literami, a metoda <code class="keyword">toLowerCase()</code> zwraca łańcuch znaków z małymi literami:<br><br>
+
+                <div class="codeBlock">
+                    <code class="JClass">String</code> <code class="Var">imie</code> = <code class="string">"Bozydar"</code>;<br>
+                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">imie</code>.<code class="keyword">toUpperCase()</code>);
+                    <code class="comment">// Wypisze BOZYDAR</code><br><br>
+
+                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">imie</code>.<code class="keyword">toLowerCase()</code>);
+                    <code class="comment">// Wypisze bozydar</code>
+                </div>
+            </li>
+            <li>
+                <h2>Metoda <code class="keyword">indexOf()</code></h2>
+                Metoda <code class="keyword">indexOf()</code> zwraca indeks pierwszego wystąpienia określonego tekstu w łańcuchu znaków (lub -1, jeśli nie występuje):<br><br>
+
+                <div class="codeBlock">
+                    <code class="JClass">String</code> <code class="Var">tekst</code> = <code class="string">"Spróbuj znaleźć gdzie 'wyraz' występuje"</code>;<br>
+                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">tekst</code>.<code class="keyword">indexOf</code>(<code class="string">"wyraz"</code>));
+                    <code class="comment">// Wypisze 23</code>
+                </div><br>
+
+                <div class="noteBlock">
+                    Pamiętaj, że Java zaczyna indeksowanie od 0. <br>
+                    0 jest pierwszym indeksem, 1 jest drugim indeksem, itd.
+                </div>
+            </li>
+            <li>
+                <h2>Metoda <code class="keyword">substring()</code></h2>
+                Metoda <code class="keyword">substring()</code> zwraca podciąg łańcucha znaków, zaczynając od określonej pozycji do końca:<br><br>
+
+                <div class="codeBlock">
+                    <code class="JClass">String</code> <code class="Var">tekst</code> = <code class="string">"Przykładowy tekst do zadania"</code>;<br>
+                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">tekst</code>.<code class="keyword">substring</code>(<code class="number">12</code>));
+                    <code class="comment">// Wypisze "tekst do zadania"</code>
+                </div>
+            </li>
+        </ul>
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Konkatenacja nici</h1>
+        Konkatenacja oznacza łączenie dwóch nici w jedną. W Javie używamy operatora <code class="keyword">+</code> do łączenia nici:<br><br>
         
+        <div class="codeBlock">
+            <code class="JClass">String</code> <code class="Var">imie</code> = <code class="string">"Bozydar"</code>;<br>
+            <code class="JClass">String</code> <code class="Var">nazwisko</code> = <code class="string">"Nowak"</code>;<br>
+            <code class="JClass">String</code> <code class="Var">pelneImie</code> = <code class="Var">imie</code> + <code class="string">" "</code> + <code class="Var">nazwisko</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">pelneImie</code>);
+        </div><br>
+        Można również użyć metody <code class="keyword">concat()</code>:<br><br>
+
+        <div class="codeBlock">
+            <code class="JClass">String</code> <code class="Var">imie</code> = <code class="string">"Bozydar"</code>;<br>
+            <code class="JClass">String</code> <code class="Var">nazwisko</code> = <code class="string">"Nowak"</code>;<br>
+            <code class="JClass">String</code> <code class="Var">pelneImie</code> = <code class="Var">imie</code>.<code class="keyword">concat</code>(<code class="string">" "</code>).<code class="keyword">concat</code>(<code class="Var">nazwisko</code>);<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">pelneImie</code>);
+        </div>
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Dodawanie liczb i łańcuchów znaków</h1>
+        <div class="noteBlock">
+            Java używa operatora <code class="keyword">+</code> do dodawania i konkatenacji.<br>
+            Liczby są dodawane, a nici są łączone.
+        </div><br>
+        
+        Jeżeli spróbujesz dodać liczbę i łańcuch znaków, wynikiem będzie Konkatenacja:<br>
+
+        <div class="codeBlock">
+            <code class="JClass">int</code> <code class="Var">x</code> = <code class="number">10</code>;<br>
+            <code class="JClass">String</code> <code class="Var">y</code> = <code class="string">"20"</code>;<br>
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">x</code> + <code class="Var">y</code>);
+            <code class="comment">// Wypisze 1020 (jako String)</code>
+        </div>
+
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Znaki modyfikacji</h1>
+        Niektóre znaki w Javie są zarezerwowane i nie mogą być używane w łańcuchach znaków bezpośrednio. Aby użyć tych znaków, musisz użyć znaków modyfikacji:<br><br>
+
+        <table>
+            <tr>
+                <th>Znak</th>
+                <th>Opis</th>
+            </tr>
+            <tr>
+                <td>\n</td>
+                <td>Nowy wiersz</td>
+            </tr>
+            <tr>
+                <td>\r</td>
+                <td>Wiersz powrotu</td>
+            </tr>
+            <tr>
+                <td>\t</td>
+                <td>Tabulator</td>
+            </tr>
+            <tr>
+                <td>\b</td>
+                <td>Backspace</td>
+            </tr>
+            <tr>
+                <td>\'</td>
+                <td>Apostrof</td>
+            </tr>
+            <tr>
+                <td>\"</td>
+                <td>Cudzysłów</td>
+            </tr>
+            <tr>
+                <td>\\</td>
+                <td>Ukośnik wsteczny</td>
+            </tr>
+        </table>
+
     </div>
+
     <script src="../scripts/cookiesHandler.js"></script>
     <script src="../scripts/scroll.js"></script>
 </body>
+
 </html>

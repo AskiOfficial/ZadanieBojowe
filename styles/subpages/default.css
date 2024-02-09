@@ -23,3 +23,8 @@ a:visited
 { color: #085c86;}
 a:hover
 { color: #F8981D;}
+
+.methods > li 
+{
+    margin: 20px 0;
+}
