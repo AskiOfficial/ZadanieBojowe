@@ -10,7 +10,7 @@ const Panels =
     "Operatory" : "Arytmetyka",
     "Nici" : "Ciągi znaków",
     "Matematyka" : "Funkcje matematyczne oraz liczby losowe",
-    "Warunek jeśli" : "Jeśli {...} W przeciwnym razie {...}",
+    "Warunki" : "Jeśli {...} W przeciwnym razie {...} oraz swich {...}",
     "Pętle" : "FOR, WHILE, CONTINUE oraz BREAK",
     "Tablice" : "Wiele wartości tego samego typu w jednym miejscu",
     
