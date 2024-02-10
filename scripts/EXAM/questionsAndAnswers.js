@@ -1,3 +1,5 @@
+const QUESTIONS_DEV_MODE = true;
+
 let selectedQuestion = 0;
 const _AmountOfQuestions = 20;
 
@@ -11,14 +13,24 @@ let AssignedQuestions = { };
 let AssignedAnswers = { };
     for(let i = 0; i < _AmountOfQuestions; i++)
     {
-        let pytanie = Math.floor(Math.random() * QuestionsKeys.length);
-        ButtonPanel.innerHTML += `<input type="button" value="${i+1}" class="eSelector" onClick="selectQuestion(${i})">`;
-        AssignedQuestions[i] = QuestionsKeys[pytanie];
-        AssignedAnswers[i] = 0;
-    
+        let Exist = false;
+        while(!Exist)
+        {
+            Exist = true;
+            let pytanie = Math.floor(Math.random() * QuestionsKeys.length);
+            ButtonPanel.innerHTML += `<input type="button" value="${i+1}" class="eSelector" onClick="selectQuestion(${i})">`;
+            AssignedQuestions[i] = QuestionsKeys[pytanie];
+            AssignedAnswers[i] = 0;
+        
+            if(!QUESTIONS_DEV_MODE)
+            for(let j = 0; i < _AmountOfQuestions; j++)
+            {
+                if(AssignedQuestions[i] == AssignedQuestions[j] && !QUESTIONS_DEV_MODE)
+                { Exist = false; break; }
+            }
+        }
         //Losowanie pytań z listy (trzeba dodać, żeby się nie powtarzały ale najpierw potrzebujemy min 20 pytań
         //w generate questions)
-        // schemat pytań {"pytanie":[index poprawnej odpowiedzi, "A", "B", "C", "D"]}
     }
 const QuestionButtons = document.querySelectorAll(".eSelector");
 selectQuestion(0);

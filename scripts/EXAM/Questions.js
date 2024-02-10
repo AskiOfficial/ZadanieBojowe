@@ -79,7 +79,7 @@ Questions[pyt] = [2,
 
 /*
 ##############################################
-                PYTANIE 4.1
+                PYTANIE 4
 ##############################################
 */
 
@@ -94,7 +94,7 @@ Questions[pyt] = [2,
 
 /*
 ##############################################
-                PYTANIE 4.2
+                PYTANIE 5
 ##############################################
 */
 
@@ -109,7 +109,7 @@ Questions[pyt] = [3,
 
 /*
 ##############################################
-                PYTANIE 5
+                PYTANIE 6
 ##############################################
 */
 
@@ -145,9 +145,145 @@ Questions[pyt] = [4,
 
 /*
 ##############################################
-                PYTANIE 6
+                PYTANIE 7
 ##############################################
 */
+pyt = `Który z poniższych zapisów deklaracji zmiennej spowoduje błąd`
+Questions[pyt] = [3,
+    `<div class="EcodeBlock">
+        <code class="keyword">int</code> <code class="Var">mojInt</code> = <code class="number">2077</code>;
+    </div>`,
+    `<div class="EcodeBlock">
+        <code class="JClass">String</code> <code class="Var">mojString</code> = <code class="string">"2077"</code>;
+    </div>`,
+    `<div class="EcodeBlock">
+        <code class="keyword">byte</code> <code class="Var">mojByte</code> = <code class="number">2077</code>;
+    </div>`,
+    `<div class="EcodeBlock">
+        <code class="keyword">double</code> <code class="Var">mojDouble</code> = <code class="number">20.77</code>;
+    </div>`
+]   
+
+/*
+##############################################
+                PYTANIE 8
+##############################################
+*/
+pyt = `Jaki jest wynik poniższego kodu
+<div class="EcodeBlock">
+    <code class="JClass">String</code>[] <code class="Var">miasta</code> = {<code class="string">"Poznan"</code>,
+        <code class="string">"Warszawa"</code>,
+        <code class="string">"Lodz"</code>,
+        <code class="string">"Krakow"</code>,
+        <code class="string">"Gdansk"</code>,
+        <code class="string">"Rzeszow"</code>};<br>
+    
+    <code class="keyword">for</code>(<code class="JClass">String</code> <code class="Var">miasto</code> : <code class="Var">miasta</code>)<br>
+    {
+        <div class="codeTab">
+            <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">miasto</code>.substring(<code class="number">0</code>, <code class="number">2</code>);
+        </div>
+    }
+</div>
+`
+Questions[pyt] = [4,
+    `
+    P<br>
+    W<br>
+    L<br>
+    K<br>
+    G<br>
+    R
+    `,
+    `
+    oz<br>
+    ar<br>
+    od<br>
+    ra<br>
+    da<br>
+    ze
+    `,
+    `
+    Poznan<br>
+    Warszawa<br>
+    Lodz<br>
+    Krakow<br>
+    Gdansk<br>
+    Rzeszow
+    `,
+    `
+    Po<br>
+    Wa<br>
+    Lo<br>
+    Kr<br>
+    Gd<br>
+    Rz
+    `,
+]
+
+/*
+##############################################
+                PYTANIE 9
+##############################################
+*/
+pyt = `Słowa kluczowe w javie są pisane z dużej litery`
+Questions[pyt] = [2,
+    `Prawda`,
+    `Fałsz`,
+    `#*#`,
+    `#*#`
+]
+/*
+##############################################
+                PYTANIE 10
+##############################################
+*/
+pyt = `Który typ danych przyjmie powyższą wartość: <code class="number">14.9d</code>`
+Questions[pyt] = [4,
+    `<code class="JClass">String</code>`,
+    `<code class="keyword">int</code>`,
+    `<code class="keyword">boolean</code>`,
+    `<code class="keyword">double</code>`
+]
+/*
+##############################################
+                PYTANIE 11
+##############################################
+*/
+pyt = `Co należy wstawić pomiędzy dwoma warunkami w <code class="keyword">if</code>(), żeby wykonało się jeśli oba warunki będą spełnione`
+Questions[pyt] = [3,
+    `!`,
+    `||`,
+    `&&`,
+    `#*#`
+]
+/*
+##############################################
+                PYTANIE 12
+##############################################
+*/
+pyt = `Co należy wstawić pomiędzy dwoma warunkami w <code class="keyword">if</code>(), żeby wykonało się jeśli jeden z warunków będzie spełnione`
+Questions[pyt] = [2,
+    `!`,
+    `||`,
+    `&&`,
+    `#*#`
+]
+/*
+##############################################
+                PYTANIE 13
+##############################################
+*/
+pyt = `NIGGER`
+Questions[pyt] = [2,
+    `TRUE`,
+    `FALSE`,
+    `#*#`,
+    `#*#`
+]
+
+
 
 
 const QuestionsKeys = Array.from(Object.keys(Questions));
+console.log(QuestionsKeys.length)

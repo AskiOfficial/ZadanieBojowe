@@ -45,6 +45,8 @@ body, html
     width: 100vw;
     background-color: #12345641;
     overflow-y: auto;
+    overflow-x: hidden;
+    color-scheme: dark;
 }
 
 .eSelector

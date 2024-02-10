@@ -1,7 +1,8 @@
-let changedStie = 0;
-const DEV_MODE = false;
+const TABSWICH_DEV_MODE = true;
 
-if(GetCookie("tryAgain") == "yes" && !DEV_MODE)
+let changedStie = 0;
+
+if(GetCookie("tryAgain") == "yes" && !TABSWICH_DEV_MODE)
 {
     StaredExam = false;
     document.getElementById("eWait").style.display = "flex";
@@ -17,7 +18,7 @@ window.addEventListener("blur", () => {
         document.title = `Oj zjebałeś kolego! - ${changedStie}`;
         document.getElementById("elostAudio").play();
 
-        if(!DEV_MODE)
+        if(!TABSWICH_DEV_MODE)
         {
             document.getElementById("eLooser").style.display = "flex";
             
