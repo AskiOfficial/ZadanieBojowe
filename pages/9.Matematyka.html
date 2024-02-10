@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,74 @@
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
 </head>
+
 <body>
-    
+    <div>
+        <h1>Klasa <code class="JClass">Math</code></h1>
+        Klasa <code class="JClass">Math</code> służy w Javie do wykonywania zarówno podstawowych jak i nieco bardziej skomplikowanych operacji matematycznych.<br><br>
+
+        <ul class="methods">
+            <li>
+                <h2><code class="JClass">Math</code>.<code class="keyword">max</code>(x, y)</h2>
+                Metoda zwraca większą z dwóch liczb.
+                <div class="codeBlock">
+                    <code class="JClass">Math</code>.<code class="keyword">max</code>(<code class="number">2</code>,<code class="number">5</code>); <code class="comment">// 5</code>
+                </div>
+            </li>
+            <li>
+                <h2><code class="JClass">Math</code>.<code class="keyword">min</code>(x, y)</h2>
+                Metoda zwraca mniejszą z dwóch liczb.
+                <div class="codeBlock">
+                    <code class="JClass">Math</code>.<code class="keyword">min</code>(<code class="number">2</code>,<code class="number">5</code>); <code class="comment">// 2</code>
+                </div>
+            </li>
+            <li>
+                <h2><code class="JClass">Math</code>.<code class="keyword">pow</code>(x, y)</h2>
+                Metoda zwraca x podniesione do potęgi y.
+                <div class="codeBlock">
+                    <code class="JClass">Math</code>.<code class="keyword">pow</code>(<code class="number">2</code>,<code class="number">3</code>); <code class="comment">// 8.0</code>
+                </div>
+            </li>
+            <li>
+                <h2><code class="JClass">Math</code>.<code class="keyword">sqrt</code>(x)</h2>
+                Metoda zwraca pierwiastek kwadratowy z liczby x.
+                <div class="codeBlock">
+                    <code class="JClass">Math</code>.<code class="keyword">sqrt</code>(<code class="number">16</code>); <code class="comment">// 4.0</code>
+                </div>
+            </li>
+            <li>
+                <h2><code class="JClass">Math</code>.<code class="keyword">abs</code>(x)</h2>
+                Metoda zwraca wartość bezwzględną z liczby x.
+                <div class="codeBlock">
+                    <code class="JClass">Math</code>.<code class="keyword">abs</code>(<code class="number">-5</code>); <code class="comment">// 5</code>
+                </div>
+            </li>
+        </ul>
+    </div><br>
+    <hr>
+    <h1>Losowanie liczb</h1>
+    Java posiada wbudowany generator liczb pseudolosowych. Aby wylosować liczbę, należy skorzystać z metody 
+    <code class="JClass">Math</code>.<code class="keyword">random</code>().<br>
     <div class="codeBlock">
-        
+        <code class="JClass">Math</code>.<code class="keyword">random</code>();
     </div>
+    Metoda ta zwraca liczbę z przedziału <code class="number">0.0</code> do <code class="number">1.0</code>.<br><br>
+
+    Aby wylosować liczbę z przedziału <code class="number">0</code> do <code class="number">10</code>, należy skorzystać z poniższego wzoru:
+    <div class="codeBlock">
+        <code class="JClass">Math</code>.<code class="keyword">random</code>() * <code class="number">11</code>;
+    </div><br>
+    
+    Jeżeli chcesz wylosować liczbę z przedziału <code class="number">5</code> do <code class="number">15</code>, wystarczy dodać do wyniku <code class="number">5</code>:
+    <div class="codeBlock">
+        <code class="JClass">Math</code>.<code class="keyword">random</code>() * <code class="number">11</code> + <code class="number">5</code>;
+    </div>
+    
+
+
+
     <script src="../scripts/cookiesHandler.js"></script>
     <script src="../scripts/scroll.js"></script>
 </body>
+
 </html>

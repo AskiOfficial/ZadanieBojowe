@@ -9,9 +9,8 @@ const Panels =
     "Konwersja typu" : "Przypisanie wartości jednego typu do drugiego",
     "Operatory" : "Arytmetyka",
     "Nici" : "Ciągi znaków",
-    "Matematyka" : "funkcje matematyczne oraz liczby losowe",
+    "Matematyka" : "Funkcje matematyczne oraz liczby losowe",
     "Warunek jeśli" : "Jeśli {...} W przeciwnym razie {...}",
-    "Przełącznik" : "Switche",
     "Pętle" : "FOR, WHILE, CONTINUE oraz BREAK",
     "Tablice" : "Wiele wartości tego samego typu w jednym miejscu",
     
