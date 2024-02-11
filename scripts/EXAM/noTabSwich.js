@@ -16,7 +16,7 @@ window.addEventListener("blur", () => {
     {
         changedStie++;
         document.title = `Oj zjebałeś kolego! - ${changedStie}`;
-        document.getElementById("elostAudio").play();
+        //document.getElementById("elostAudio").play();
 
         if(!TABSWICH_DEV_MODE)
         {

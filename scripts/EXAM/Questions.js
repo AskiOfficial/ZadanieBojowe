@@ -83,7 +83,7 @@ Questions[pyt] = [2,
 ##############################################
 */
 
-pyt = `Jak stworzyć komentarz wieloliniowy
+pyt = `Jak stworzyć komentarz wieloliniowy?
 `
 Questions[pyt] = [2,
     `<div class="EcodeBlock"><code class="comment">// To jest komentarz wieloliniowy</code></div>`,
@@ -98,7 +98,7 @@ Questions[pyt] = [2,
 ##############################################
 */
 
-pyt = `Jak stworzyć komentarz jednoliniowy
+pyt = `Jak stworzyć komentarz jednoliniowy?
 `
 Questions[pyt] = [3,
     `<div class="EcodeBlock"><code class="comment">/* To jest komentarz jednoliniowy */</code></div>`,
@@ -148,7 +148,7 @@ Questions[pyt] = [4,
                 PYTANIE 7
 ##############################################
 */
-pyt = `Który z poniższych zapisów deklaracji zmiennej spowoduje błąd`
+pyt = `Który z poniższych zapisów deklaracji zmiennej spowoduje błąd?`
 Questions[pyt] = [3,
     `<div class="EcodeBlock">
         <code class="keyword">int</code> <code class="Var">mojInt</code> = <code class="number">2077</code>;
@@ -169,7 +169,7 @@ Questions[pyt] = [3,
                 PYTANIE 8
 ##############################################
 */
-pyt = `Jaki jest wynik poniższego kodu
+pyt = `Jaki jest wynik poniższego kodu:
 <div class="EcodeBlock">
     <code class="JClass">String</code>[] <code class="Var">miasta</code> = {<code class="string">"Poznan"</code>,
         <code class="string">"Warszawa"</code>,
@@ -226,7 +226,7 @@ Questions[pyt] = [4,
                 PYTANIE 9
 ##############################################
 */
-pyt = `Słowa kluczowe w javie są pisane z dużej litery`
+pyt = `Słowa kluczowe w javie są pisane z dużej litery?`
 Questions[pyt] = [2,
     `Prawda`,
     `Fałsz`,
@@ -250,7 +250,7 @@ Questions[pyt] = [4,
                 PYTANIE 11
 ##############################################
 */
-pyt = `Co należy wstawić pomiędzy dwoma warunkami w <code class="keyword">if</code>(), żeby wykonało się jeśli oba warunki będą spełnione`
+pyt = `Co należy wstawić pomiędzy dwoma warunkami w <code class="keyword">if</code>(), żeby wykonało się jeśli oba warunki będą spełnione?`
 Questions[pyt] = [3,
     `!`,
     `||`,
@@ -262,7 +262,7 @@ Questions[pyt] = [3,
                 PYTANIE 12
 ##############################################
 */
-pyt = `Co należy wstawić pomiędzy dwoma warunkami w <code class="keyword">if</code>(), żeby wykonało się jeśli jeden z warunków będzie spełnione`
+pyt = `Co należy wstawić pomiędzy dwoma warunkami w <code class="keyword">if</code>(), żeby wykonało się jeśli jeden z warunków będzie spełnione?`
 Questions[pyt] = [2,
     `!`,
     `||`,
@@ -274,14 +274,97 @@ Questions[pyt] = [2,
                 PYTANIE 13
 ##############################################
 */
-pyt = `NIGGER`
+pyt = `Jak poprawnie wypisać w konsoli <code class="string">"Hello World"</code>?`
 Questions[pyt] = [2,
-    `TRUE`,
-    `FALSE`,
+    `print(<code class="string">"Hello World"</code>);`,
+    `<code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="string">"Hello World"</code>);`,
+    `<code class="JClass">Console</code>.WriteLine(<code class="string">"Hello World"</code>);`,
+    `#*#`
+]
+/*
+##############################################
+                PYTANIE 14
+##############################################
+*/
+pyt = `Java to skrót od Javascript`
+Questions[pyt] = [2,
+    `PRAWDA`,
+    `FAŁSZ`,
     `#*#`,
     `#*#`
 ]
-
+/*
+##############################################
+                PYTANIE 15
+##############################################
+*/
+pyt = `Który typ danych przechowuje tekst?`
+Questions[pyt] = [1,
+    `<code class="JClass">String</code>`,
+    `<code class="keyword">int</code>`,
+    `<code class="keyword">boolean</code>`,
+    `<code class="JClass">TextVar</code>`
+]
+/*
+##############################################
+                PYTANIE 16
+##############################################
+*/
+pyt = `Który typ danych przechowuje jeden znak?`
+Questions[pyt] = [2,
+    `<code class="JClass">String</code>`,
+    `<code class="keyword">char</code>`,
+    `<code class="keyword">float</code>`,
+    `<code class="JClass">CharacterVar</code>`
+]
+/*
+##############################################
+                PYTANIE 17
+##############################################
+*/
+pyt = `Jak pozyskać długość tekstu?`
+Questions[pyt] = [1,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.length();</div>`,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.GetLength();</div>`,
+    `<div class="EcodeBlock">sizeOf(<code class="Var">mojTekst</code>);</div>`,
+    `<div class="EcodeBlock">len(<code class="Var">mojTekst</code>);</div>`
+]
+/*
+##############################################
+                PYTANIE 18
+##############################################
+*/
+pyt = `Jak dodać do siebie dwie wartości?`
+Questions[pyt] = [3,
+    `<div class="EcodeBlock"><code class="Var">x</code> PLUS <code class="Var">y</code>;</div>`,
+    `<div class="EcodeBlock"><code class="Var">x</code> * <code class="Var">y</code>;</div>`,
+    `<div class="EcodeBlock"><code class="Var">x</code> + <code class="Var">y</code>;</div>`,
+    `#*#`
+]
+/*
+##############################################
+                PYTANIE 19
+##############################################
+*/
+pyt = `Jak zamienić tekst na taki składający się z dużych liter?`
+Questions[pyt] = [3,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.MakeBig();</div>`,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toLowerCase();</div>`,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toUpperCase();</div>`,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toUpper();</div>`
+]
+/*
+##############################################
+                PYTANIE 20
+##############################################
+*/
+pyt = `W jakich nawiasach deklaruje się wartości dla tablicy?`
+Questions[pyt] = [1,
+    `{ }`,
+    `< >`,
+    `[ ]`,
+    `( )`
+]
 
 
 
