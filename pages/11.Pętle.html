@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,175 @@
     <link rel="stylesheet" href="../styles/subpages/default.css">
     <link rel="stylesheet" href="../styles/subpages/codeBlock.css">
 </head>
+
 <body>
-    
-    <div class="codeBlock">
-        
+    <div>
+        <h1>Co to jest pętla?</h1>
+        Pętla to fragment kodu, który wykonuje się wielokrotnie, aż do spełnienia określonego warunku. W języku JavaScript mamy do dyspozycji trzy rodzaje pętli:
+        <code class="keyword">while</code>, <code class="keyword">do...while</code> i <code class="keyword">for</code>.
+        Pętle są bardzo przydatne, gdy chcemy wykonać jakąś operację wielokrotnie, np. wyświetlić wszystkie elementy tablicy,
+        wykonać jakąś operację na każdym elemencie tablicy, itp.<br><br>
+
+        <h2>Pętla <code class="keyword">while</code></h2>
+        Pętla <code class="keyword">while</code> wykonuje się, dopóki warunek jest spełniony.
+        <div class="codeBlock">
+            <code class="keyword">while</code> (warunek)<br>
+            {
+            <div class="codeTab">
+                <code class="comment">// kod, który się wykona, jeśli warunek jest spełniony</code>
+            </div>
+            }<br>
+        </div>
+        <div class="noteBlock">
+            Należy pamiętać, żeby w kodzie, który się wykona, zmienić warunek, inaczej pętla będzie wykonywać się w nieskończoność.
+        </div>
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">i</code> = <code class="number">0</code>;<br>
+            <code class="keyword">while</code> (<code class="Var">i</code> &lt; <code class="number">5</code>)<br>
+            {
+            <div class="codeTab">
+                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">i</code>);<br>
+                <code class="Var">i</code>++;<br>
+            </div>
+            }
+        </div><br>
+
+        <h2>Pętla <code class="keyword">do...while</code></h2>
+        Pętla <code class="keyword">do...while</code> wykonuje się, dopóki warunek jest spełniony, ale kod wewnątrz pętli wykona się przynajmniej raz.
+        <div class="codeBlock">
+            <code class="keyword">do</code><br>
+            {<br>
+            <div class="codeTab">
+                <code class="comment">// kod, który się wykona, jeśli warunek jest spełniony</code><br>
+            </div>
+            }
+            <br><code class="keyword">while</code> (warunek);
+        </div>
+        <div class="codeBlock">
+            <code class="keyword">int</code> <code class="Var">i</code> = <code class="number">0</code>;<br>
+            <code class="keyword">do</code><br>
+            {<br>
+            <div class="codeTab">
+                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">i</code>);<br>
+                <code class="Var">i</code>++;<br>
+            </div>
+            }
+            <br><code class="keyword">while</code> (<code class="Var">i</code> &lt; <code class="number">5</code>);
+        </div><br>
+
+        <h2>Pętla <code class="keyword">for</code></h2>
+        Pętla <code class="keyword">for</code> jest trochę bardziej skomplikowana, ale za to bardziej elastyczna. Składa się z trzech części:
+        <ul>
+            <li>inicjalizacja zmiennej</li>
+            <li>warunek</li>
+            <li>zmiana wartości zmiennej</li>
+        </ul>
+        <div class="codeBlock">
+            <code class="keyword">for</code> (inicjalizacja; warunek; zmiana)<br>
+            {<br>
+            <div class="codeTab">
+                <code class="comment">// kod, który się wykona, jeśli warunek jest spełniony</code><br>
+            </div>
+            }
+        </div>
+        <div class="codeBlock">
+            <code class="keyword">for</code> (<code class="keyword">int</code> <code class="Var">i</code> = <code class="number">0</code>; <code class="Var">i</code> &lt; <code class="number">5</code>; <code class="Var">i</code>++)<br>
+            {<br>
+            <div class="codeTab">
+                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">i</code>);<br>
+            </div>
+            }
+        </div>
+        Kod wewnątrz pętli <code class="keyword">for</code> wykona się pięć razy, bo zmienna <code class="Var">i</code> zaczyna się od zera, a kończy na czterech. <br>
+        Można także użyć pętli <code class="keyword">for</code> w środku innej pętli <code class="keyword">for</code>, co pozwala na tworzenie bardziej skomplikowanych struktur.
+        <div class="codeBlock">
+            <code class="keyword">for</code> (<code class="keyword">int</code> <code class="Var">i</code> = <code class="number">0</code>; <code class="Var">i</code> &lt; <code class="number">5</code>; <code class="Var">i</code>++)<br>
+            {<br>
+            <div class="codeTab">
+                <code class="keyword">for</code> (<code class="keyword">int</code> <code class="Var">j</code> = <code class="number">0</code>; <code class="Var">j</code> &lt; <code class="number">5</code>; <code class="Var">j</code>++)<br>
+                {<br>
+                <div class="codeTab">
+                    <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">i</code> + <code class="string">" x "</code> + <code class="Var">j</code> + <code class="string">" = "</code> + <code class="Var">i</code> * <code class="Var">j</code>);<br>
+                </div>
+                }
+            </div>
+            }
+        </div>
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Pętla for-each</h1>
+        Istnieje jeszcze jeden typ pętli i jest nim pętla <code class="keyword">for-each</code>. Jest to pętla, która służy do przechodzenia przez wszystkie elementy tablicy.
+        Pętla wykona się tyle razy, ile jest elementów w tablicy.
+        <div class="codeBlock">
+            <code class="keyword">for</code> (typ zmienna : tablica)<br>
+            {<br>
+            <div class="codeTab">
+                <code class="comment">// kod, który się wykona, jeśli warunek jest spełniony</code><br>
+            </div>
+            }
+        </div>
+
+        <div class="codeBlock">
+            <code class="JClass">String</code>[] <code class="Var">samoloty</code> =
+            {<code class="string">"Boeing"</code>, <code class="string">"Airbus"</code>, <code class="string">"Embraer"</code>,
+            <code class="string">"Bombardier"</code>, <code class="string">"Cessna"</code>};<br>
+            <code class="keyword">for</code> (<code class="JClass">String</code> <code class="Var">samolot</code> : <code class="Var">samoloty</code>)<br>
+            {<br>
+            <div class="codeTab">
+                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">samolot</code>);<br>
+            </div>
+            }
+        </div>
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Instrukcja <code class="keyword">break</code></h1>
+        Przy temacie switchy wspomnieliśmy o instrukcji <code class="keyword">break</code>. Teraz warto wspomnieć o niej w kontekście pętli. 
+        Instrukcja <code class="keyword">break</code> służy do przerwania pętli. Działa ona w pętlach <code class="keyword">for</code>, <code class="keyword">while</code>, <code class="keyword">do...while</code> oraz <code class="keyword">for-each</code>.
+        <div class="codeBlock">
+            <code class="keyword">for</code> (<code class="keyword">int</code> <code class="Var">i</code> = <code class="number">0</code>; <code class="Var">i</code> &lt; <code class="number">5</code>; <code class="Var">i</code>++)<br>
+            {<br>
+            <div class="codeTab">
+                <code class="keyword">if</code> (<code class="Var">i</code> == <code class="number">3</code>)<br>
+                {<br>
+                <div class="codeTab">
+                    <code class="keyword">break</code>;<br>
+                </div>
+                }<br>
+                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">i</code>);<br>
+            </div>
+            }
+        </div>
+        W tym przypadku pętla <code class="keyword">for</code> wykona się tylko trzy razy, bo po trzecim wykonaniu pętla zostanie przerwana.
+    </div><br>
+    <hr>
+
+    <div>
+        <h1>Instrukcja <code class="keyword">continue</code></h1>
+        Instrukcja <code class="keyword">continue</code> służy do przerwania obecnej iteracji pętli i przejścia do kolejnej. 
+        <div class="codeBlock">
+            <code class="keyword">for</code> (<code class="keyword">int</code> <code class="Var">i</code> = <code class="number">0</code>; <code class="Var">i</code> &lt; <code class="number">5</code>; <code class="Var">i</code>++)<br>
+            {<br>
+            <div class="codeTab">
+                <code class="keyword">if</code> (<code class="Var">i</code> == <code class="number">3</code>)<br>
+                {<br>
+                <div class="codeTab">
+                    <code class="keyword">continue</code>;<br>
+                </div>
+                }<br>
+                <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">i</code>);<br>
+            </div>
+            }
+        </div>
+        W tym przypadku pętla <code class="keyword">for</code> wykona się pięć razy, ale nie wyświetli liczby trzy, bo zostanie przerwana.
     </div>
+
+
     <script src="../scripts/cookiesHandler.js"></script>
     <script src="../scripts/scroll.js"></script>
 </body>
+
 </html>
