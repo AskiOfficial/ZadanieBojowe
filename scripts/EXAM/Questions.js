@@ -365,6 +365,18 @@ Questions[pyt] = [1,
     `[ ]`,
     `( )`
 ]
+/*
+##############################################
+                PYTANIE 21
+##############################################
+*/
+pyt = `W jakie nawiasy stawia się obok typu zmiennej, żeby zadeklarować tablicę?`
+Questions[pyt] = [3,
+    `{ }`,
+    `< >`,
+    `[ ]`,
+    `( )`
+]
 
 
 
