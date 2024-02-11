@@ -15,7 +15,7 @@ window.addEventListener("blur", () => {
     if(StaredExam)
     {
         changedStie++;
-        document.title = `Oj zjebałeś kolego! - ${changedStie}`;
+        document.title = `NIE WOLNO OSZUKIWAĆ`;
         //document.getElementById("elostAudio").play();
 
         if(!TABSWICH_DEV_MODE)

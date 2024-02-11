@@ -93,18 +93,59 @@ function selectAnswer(id)
 function Verificate()
 {
     StaredExam = false;
+    document.getElementById("eSummary").style.display = 'flex';
     let correct = 0;
+    for(let i = 0; i < _AmountOfQuestions; i++)
+        if(Questions[AssignedQuestions[i]][0] == AssignedAnswers[i])
+            correct++;
+
+    
+    //alert((correct / _AmountOfQuestions)*100 + "%");
+
+    const SummaryPanel = document.getElementById("Scontent");
+    SummaryPanel.innerHTML += `<h1>Wynik: ${(correct/_AmountOfQuestions)*100}%</h1>\n<hr>\n`
+    
     for(let i = 0; i < _AmountOfQuestions; i++)
     {
         if(Questions[AssignedQuestions[i]][0] == AssignedAnswers[i])
         {
-            console.log("Tak");
-            correct++;
+            SummaryPanel.innerHTML += `
+            <div class="SummaryQuestionBlock">
+                <h3>${AssignedQuestions[i]}</h3>
+                <div class="SummaryCorrect">
+                    <h4>Twoja odpowiedź jest poprawna</h4>
+                    ${Questions[AssignedQuestions[i]][AssignedAnswers[i]]}
+                </div>
+            </div>
+            `;
         }
         else
         {
-            console.log("NIE");
+            SummaryPanel.innerHTML += `
+            <div class="SummaryQuestionBlock">
+                <h3> ${AssignedQuestions[i]} </h3>
+                
+                <div class="SummaryWrong">
+                    <h4>Twoja odpowiedź</h4>
+                    ${AssignedAnswers[i] == 0 ? `Pozostawiłeś to pytanie puste` : Questions[AssignedQuestions[i]][AssignedAnswers[i]]}
+                </div>
+                
+                <div class="SummaryCorrect">
+                    <h4>Poprawna odpowiedź</h4>
+                    ${Questions[AssignedQuestions[i]] [Questions[AssignedQuestions[i]][0]]}
+                    
+                    ${/*Dla rozjaśnienia
+                    Z Questions wybierz pytanie z AssignedQuestions pod indeksem i
+                    Oraz z tablicy, znajdującej się pod powyższym kluczem, wybierz wartość znajdującą się pod indeksem 0 tej tablicy
+                    Gdzie indeks zerowy tej tablicy wskazuje na indeks poprawnej odpowiedzi
+                    */ " "}
+                </div>
+            </div>
+            `;
         }
+
+        SummaryPanel.innerHTML += "\n<hr>\n"
     }
-    alert((correct / _AmountOfQuestions)*100 + "%");
+    SummaryPanel.innerHTML += `<a href=../index.html><button class="eButton">Wróć do strony głównej</button></a>`
+    SummaryPanel.innerHTML += `<a href=Pytania.html><button class="eButton">Spróbuj ponownie</button></a><br>`
 }

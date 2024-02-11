@@ -144,7 +144,7 @@ a:hover {
     height: 100vh;
 
     position: absolute;
-    backdrop-filter: blur(0.5vw);
+    backdrop-filter: blur(5vw);
     display: flex;
 
     align-items: center;
@@ -157,13 +157,13 @@ a:hover {
     position: absolute;
     padding: 2vw;
     width: 50vw;
-    height: 75vh;
+    height: 30vh;
 
     background-color: #141414;
     border-color: #282828;
     border-width: 0.4vw;
     border-style: solid;
-    border-radius: 10vw;
+    border-radius: 5vw;
 
     box-shadow: 0vw 0vw 0.7vw 0.05vw rgb(162, 162, 162);
 }

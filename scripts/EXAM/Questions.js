@@ -1,4 +1,8 @@
-let StaredExam = true;
+let StaredExam = false;
+
+function Start()
+{StaredExam = true; document.getElementById("eSTARTER").style.display = "none";}
+
 
 const Questions = { }
 
