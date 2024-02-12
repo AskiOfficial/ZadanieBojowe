@@ -423,7 +423,31 @@ Questions[pyt] = [1,
     `<div class="EcodeBlock"><code class="keyword">if</code> <code class="Var">x</code> > <code class="Var">y</code>:</div>`,
     `#*#`
 ]
+/*
+##############################################
+                PYTANIE 25
+##############################################
+*/
+pyt = `Co wypisze poniższy kod
+<div class="EcodeBlock">
+   <code class="keyword">int</code> <code class="Var">n</code> = <code class="number">0</code>;<br>
+   <code class="keyword">while</code>(<code class="Var">n</code> < <code class="number>100</code>)<br>
+   {
+   <div class="codeTab">
 
+   </div>
+   }
+</div>
+`
+Questions[pyt] = [1,
+    `<div class="EcodeBlock"><code class="keyword">if</code>(<code class="Var">x</code> > <code class="Var">y</code>)</div>`,
+    `<div class="EcodeBlock">
+        <code class="keyword">cmp</code> <code class="Var">eax</code>, <code class="Var">ebx</code><br>
+        <code class="keyword">jg</code> <code class="classOrMethodName">ifequal</code>
+    </div>`,
+    `<div class="EcodeBlock"><code class="keyword">if</code> <code class="Var">x</code> > <code class="Var">y</code>:</div>`,
+    `#*#`
+]
 
 const QuestionsKeys = Array.from(Object.keys(Questions));
 console.log(QuestionsKeys.length)
