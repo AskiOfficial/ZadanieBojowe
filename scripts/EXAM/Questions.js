@@ -435,6 +435,10 @@ pyt = `Co wypisze poniższy kod
    {
    <div class="codeTab">
       <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">n</code>);
+      <code class="keyword">if</code>(<code class="Var">n</code> == <code class="number">9</code>)
+         <div class="codeTab">
+           <code class="keyword">break</code>;
+        </div>
    </div>
    }
 </div>
