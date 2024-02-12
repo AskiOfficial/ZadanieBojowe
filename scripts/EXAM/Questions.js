@@ -439,17 +439,15 @@ pyt = `Co wypisze poniższy kod
          <div class="codeTab">
            <code class="keyword">break</code>;
         </div>
+      <code class="Var">n</code>++;
    </div>
    }
 </div>
 `
-Questions[pyt] = [1,
-    `<div class="EcodeBlock"><code class="keyword">if</code>(<code class="Var">x</code> > <code class="Var">y</code>)</div>`,
-    `<div class="EcodeBlock">
-        <code class="keyword">cmp</code> <code class="Var">eax</code>, <code class="Var">ebx</code><br>
-        <code class="keyword">jg</code> <code class="classOrMethodName">ifequal</code>
-    </div>`,
-    `<div class="EcodeBlock"><code class="keyword">if</code> <code class="Var">x</code> > <code class="Var">y</code>:</div>`,
+Questions[pyt] = [3,
+    `Liczby od 0 do 99`,
+    `Liczby od 0 do 99 z pominięciem 9`,
+    `Liczby od 0 do 9`,
     `#*#`
 ]
 
