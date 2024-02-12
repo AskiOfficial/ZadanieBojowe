@@ -408,7 +408,21 @@ Questions[pyt] = [1,
     `<div class="EcodeBlock"><code class="keyword">if</code> <code class="Var">x</code> == <code class="Var">y</code>:</div>`,
     `#*#`
 ]
-
+/*
+##############################################
+                PYTANIE 24
+##############################################
+*/
+pyt = `Jak sprawdzić czy wartość jest większa od drugiej?`
+Questions[pyt] = [1,
+    `<div class="EcodeBlock"><code class="keyword">if</code>(<code class="Var">x</code> > <code class="Var">y</code>)</div>`,
+    `<div class="EcodeBlock">
+        <code class="keyword">cmp</code> <code class="Var">eax</code>, <code class="Var">ebx</code><br>
+        <code class="keyword">jg</code> <code class="classOrMethodName">ifequal</code>
+    </div>`,
+    `<div class="EcodeBlock"><code class="keyword">if</code> <code class="Var">x</code> > <code class="Var">y</code>:</div>`,
+    `#*#`
+]
 
 
 const QuestionsKeys = Array.from(Object.keys(Questions));
