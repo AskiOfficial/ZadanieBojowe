@@ -1,4 +1,4 @@
-const TABSWICH_DEV_MODE = true;
+const TABSWICH_DEV_MODE = false;
 
 let changedStie = 0;
 
