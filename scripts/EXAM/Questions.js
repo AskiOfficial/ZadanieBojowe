@@ -400,12 +400,12 @@ Questions[pyt] = [2,
 */
 pyt = `Jak sprawdzić czy obie wartości są sobie równe?`
 Questions[pyt] = [1,
-    `<div class="EcodeBlock"><code class="keyword">if</code>(<code class="Var">x</code> == <code class="Var">y</code>)</div>)`,
+    `<div class="EcodeBlock"><code class="keyword">if</code>(<code class="Var">x</code> == <code class="Var">y</code>)</div>`,
     `<div class="EcodeBlock">
-        <code class="keyword">cmp</code> <code class="Var">eax</code>, <code class="Var">ebx</code>)<br>
+        <code class="keyword">cmp</code> <code class="Var">eax</code>, <code class="Var">ebx</code><br>
         <code class="keyword">je</code> <code class="classOrMethodName">ifequal</code>
     </div>`,
-    `<div class="EcodeBlock"><code class="keyword">if</code> <code class="Var">x</code> == <code class="Var">y</code>)</div>:`,
+    `<div class="EcodeBlock"><code class="keyword">if</code> <code class="Var">x</code> == <code class="Var">y</code>:</div>`,
     `#*#`
 ]
 
