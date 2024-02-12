@@ -400,10 +400,10 @@ Questions[pyt] = [2,
 */
 pyt = `Jak sprawdzić czy obie wartości są sobie równe?`
 Questions[pyt] = [3,
-    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.MakeBig();</div>`,
-    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toLowerCase();</div>`,
-    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toUpperCase();</div>`,
-    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toUpper();</div>`
+    `<div class="EcodeBlock"><code class="keyword">if</code>(<code class="Var">x</code> == <code class="Var">y</code>)</div>)`,
+    `<div class="EcodeBlock"><code class="keyword">cmp</code> <code class="Var">eax</code>, <code class="Var">ebx</code>)</div>`,
+    `<div class="EcodeBlock"><code class="keyword">if</code> <code class="Var">x</code> == <code class="Var">y</code>)</div>:`,
+    `#*#`
 ]
 
 
