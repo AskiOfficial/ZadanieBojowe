@@ -381,6 +381,30 @@ Questions[pyt] = [3,
     `[ ]`,
     `( )`
 ]
+/*
+##############################################
+                PYTANIE 22
+##############################################
+*/
+pyt = `Jak zamienić tekst na taki składający się z małycy liter?`
+Questions[pyt] = [2,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.MakeSmall();</div>`,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toLowerCase();</div>`,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toUpperCase();</div>`,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toLower();</div>`
+]
+/*
+##############################################
+                PYTANIE 23
+##############################################
+*/
+pyt = `Jak sprawdzić czy obie wartości są sobie równe?`
+Questions[pyt] = [3,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.MakeBig();</div>`,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toLowerCase();</div>`,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toUpperCase();</div>`,
+    `<div class="EcodeBlock"><code class="Var">mojTekst</code>.toUpper();</div>`
+]
 
 
 
