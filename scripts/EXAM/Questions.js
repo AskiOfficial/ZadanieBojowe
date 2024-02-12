@@ -434,7 +434,7 @@ pyt = `Co wypisze poniższy kod
    <code class="keyword">while</code>(<code class="Var">n</code> < <code class="number>100</code>)<br>
    {
    <div class="codeTab">
-
+      <code class="JClass">System</code>.<code class="staticOrInstance">out</code>.println(<code class="Var">n</code>);
    </div>
    }
 </div>
