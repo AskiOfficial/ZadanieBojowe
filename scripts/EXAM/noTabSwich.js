@@ -5,6 +5,7 @@ let changedStie = 0;
 if(GetCookie("tryAgain") == "yes" && !TABSWICH_DEV_MODE)
 {
     StaredExam = false;
+    document.getElementById("eSTARTER").style.display = "none";
     document.getElementById("eWait").style.display = "flex";
     const waitDate = new Date(GetCookie("mayTryAgain"));
     console.log(waitDate);
